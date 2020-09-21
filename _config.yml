@@ -69,7 +69,6 @@ exclude:
 include:
   - _pages
 
-
 # This specifies what badges are turned on by default for notebook posts.
 default_badges:
   github: true
