@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="twitter:card" content="summary_large_image" /><!-- Begin Jekyll SEO tag v2.6.1 -->
+<title>Machine Learning Notes | MRG Blogs</title>
+<meta name="generator" content="Jekyll v4.1.1" />
+<meta property="og:title" content="Machine Learning Notes" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="Deep Learning (Neural Networks) are much better to deal with most problems which all these algorithms can do." />
+<meta property="og:description" content="Deep Learning (Neural Networks) are much better to deal with most problems which all these algorithms can do." />
+<link rel="canonical" href="https://mrg-ai.github.io/blog/2020/09/20/Machine-Learning-Notes.html" />
+<meta property="og:url" content="https://mrg-ai.github.io/blog/2020/09/20/Machine-Learning-Notes.html" />
+<meta property="og:site_name" content="MRG Blogs" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2020-09-20T00:00:00-05:00" />
+<script type="application/ld+json">
+{"description":"Deep Learning (Neural Networks) are much better to deal with most problems which all these algorithms can do.","url":"https://mrg-ai.github.io/blog/2020/09/20/Machine-Learning-Notes.html","@type":"BlogPosting","headline":"Machine Learning Notes","dateModified":"2020-09-20T00:00:00-05:00","datePublished":"2020-09-20T00:00:00-05:00","mainEntityOfPage":{"@type":"WebPage","@id":"https://mrg-ai.github.io/blog/2020/09/20/Machine-Learning-Notes.html"},"@context":"https://schema.org"}</script>
+<!-- End Jekyll SEO tag -->
+<link rel="stylesheet" href="/blog/assets/css/style.css"><link type="application/atom+xml" rel="alternate" href="https://mrg-ai.github.io/blog/feed.xml" title="MRG Blogs" /><link rel="shortcut icon" type="image/x-icon" href="/blog/images/favicon.ico"><link href="https://unpkg.com/@primer/css/dist/primer.css" rel="stylesheet" />
+<link rel="stylesheet" href="//use.fontawesome.com/releases/v5.0.7/css/all.css">
+
+<script>
+function wrap_img(fn) {
+    if (document.attachEvent ? document.readyState === "complete" : document.readyState !== "loading") {
+        var elements = document.querySelectorAll(".post img");
+        Array.prototype.forEach.call(elements, function(el, i) {
+            if (el.getAttribute("title") && (el.className != "emoji")) {
+                const caption = document.createElement('figcaption');
+                var node = document.createTextNode(el.getAttribute("title"));
+                caption.appendChild(node);
+                const wrapper = document.createElement('figure');
+                wrapper.className = 'image';
+                el.parentNode.insertBefore(wrapper, el);
+                el.parentNode.removeChild(el);
+                wrapper.appendChild(el);
+                wrapper.appendChild(caption);
+            }
+        });
+    } else { document.addEventListener('DOMContentLoaded', fn); }
+}
+window.onload = wrap_img;
+</script>
+
+<script>
+    document.addEventListener("DOMContentLoaded", function(){
+    // add link icon to anchor tags
+    var elem = document.querySelectorAll(".anchor-link")
+    elem.forEach(e => (e.innerHTML = '<i class="fas fa-link fa-xs"></i>'));
+    });
+</script>
+</head>
+<body><header class="site-header">
+
+  <div class="wrapper"><a class="site-title" rel="author" href="/blog/">MRG Blogs</a><nav class="site-nav">
+        <input type="checkbox" id="nav-trigger" class="nav-trigger" />
+        <label for="nav-trigger">
+          <span class="menu-icon">
+            <svg viewBox="0 0 18 15" width="18px" height="15px">
+              <path d="M18,1.484c0,0.82-0.665,1.484-1.484,1.484H1.484C0.665,2.969,0,2.304,0,1.484l0,0C0,0.665,0.665,0,1.484,0 h15.032C17.335,0,18,0.665,18,1.484L18,1.484z M18,7.516C18,8.335,17.335,9,16.516,9H1.484C0.665,9,0,8.335,0,7.516l0,0 c0-0.82,0.665-1.484,1.484-1.484h15.032C17.335,6.031,18,6.696,18,7.516L18,7.516z M18,13.516C18,14.335,17.335,15,16.516,15H1.484 C0.665,15,0,14.335,0,13.516l0,0c0-0.82,0.665-1.483,1.484-1.483h15.032C17.335,12.031,18,12.695,18,13.516L18,13.516z"/>
+            </svg>
+          </span>
+        </label>
+
+        <div class="trigger"><a class="page-link" href="/blog/about/">About Me</a><a class="page-link" href="/blog/search/">Search</a><a class="page-link" href="/blog/categories/">Tags</a></div>
+      </nav></div>
+</header>
+<main class="page-content" aria-label="Content">
+      <div class="wrapper">
+        <article class="post h-entry" itemscope itemtype="http://schema.org/BlogPosting">
+
+  <header class="post-header">
+    <h1 class="post-title p-name" itemprop="name headline">Machine Learning Notes</h1><p class="post-meta post-meta-title"><time class="dt-published" datetime="2020-09-20T00:00:00-05:00" itemprop="datePublished">
+        Sep 20, 2020
+      </time>
+       • <span class="read-time" title="Estimated read time">
+    
+    
+      4 min read
+    
+</span></p>
+
+    
+
+    </header>
+
+  <div class="post-content e-content" itemprop="articleBody">
+    <p>Deep Learning (Neural Networks) are much better to deal with most problems which all these algorithms can do.</p>
+
+<p>Libraries – sklearn (scikit), IPython</p>
+
+<p>Pandas and Numpy work well with each other.</p>
+
+<p>Different Machine Learning Algorithms -</p>
+
+<p><a href="https://scikit-learn.org/stable/supervised_learning.html">https://scikit-learn.org/stable/supervised_learning.html</a></p>
+
+<p><a href="https://towardsdatascience.com/do-you-know-how-to-choose-the-right-machine-learning-algorithm-among-7-different-types-295d0b0c7f60">https://towardsdatascience.com/do-you-know-how-to-choose-the-right-machine-learning-algorithm-among-7-different-types-295d0b0c7f60</a></p>
+
+<p>Prediction of Auction price for Bulldozers using Random Forests is the exercise.</p>
+
+<p>Curse of Dimensionality and No Free Lunch theorem do not generally apply in real world.</p>
+
+<ul>
+  <li><a href="https://medium.com/@hiromi_suenaga/machine-learning-1-lesson-1-84a1dc2b5236"><span class="underline">https://medium.com/@hiromi_suenaga/machine-learning-1-lesson-1-84a1dc2b5236</span></a></li>
+</ul>
+
+<p>RandomForestRegressor — regressor is a method for predicting continuous variables (i.e. regression)</p>
+
+<p>RandomForestClassifier — classifier is a method for predicting categorical variables (i.e. classification)</p>
+
+<p>For Notebooks – There is a bit of work which needs to be done before it is usable.</p>
+
+<p>!pip install fastai==0.7.0</p>
+
+<p>!pip3 install torch torchvision</p>
+
+<p>!pip install ”torchtext==0.3.1”</p>
+
+<p>!pip3 install spacy </p>
+
+<p>!python -m spacy download en</p>
+
+<p>from fastai.imports import *</p>
+
+<p>from fastai.structured import *</p>
+
+<p>from torch import * </p>
+
+<p>from pandas_summary import DataFrameSummary</p>
+
+<p>from sklearn.ensemble import RandomForestRegressor, RandomForestClassifier</p>
+
+<p>from IPython.display import display</p>
+
+<p>from sklearn import metrics</p>
+
+<p>Data will also have to be uploaded and will vanish once the Colab is disconnected.</p>
+
+<p>For Lesson 1 – train.csv was uploaded after creating necessary folders on the colab machine.</p>
+
+<p>Alternate solution for data is to use google drive and using that path in the program or downloading from URL (Kaggle or Google Drive). Use whichever works and is the fastest/easiest.</p>
+
+<p><span class="underline">Random Forest Exercise Summary</span></p>
+
+<p>Refer the Jupyter notebook for details - <a href="https://colab.research.google.com/drive/1ARrxUcm8cJdQ0J7sONa5FfQuan9nZSDH#scrollTo=6jeziZfhnA2x">https://colab.research.google.com/drive/1ARrxUcm8cJdQ0J7sONa5FfQuan9nZSDH#scrollTo=6jeziZfhnA2x</a></p>
+
+<ul>
+  <li>
+    <p>Take an input csv. (CSV can be populated by any means with whatever relevant data is needed for your requirement)</p>
+  </li>
+  <li>
+    <p>The goal is to predict a measure (in this case Auction Price)</p>
+  </li>
+  <li>
+    <p>Look at the data to understand what it has type of columns (String, number, date…), NULL values, blank values etc.</p>
+  </li>
+  <li>
+    <p>Read the csv data into a Pandas Dataframe. While reading there are options to specify if there are any date columns. Specify that and Pandas will read those as Dates rather than strings.</p>
+  </li>
+  <li>
+    <p>Choose a Metric to evaluate the prediction vs actual.</p>
+  </li>
+</ul>
+
+<blockquote>
+  <p>It’s important to note what metric is being used for a project. Generally, selecting the metric(s) is an important part of the project setup. However, in this case Kaggle tells us what metric to use: RMSLE (root mean squared log error) to compare between the actual and predicted auction prices. Therefore, we take the log of the prices and then RMSE on top of this will give RMSLE.</p>
+</blockquote>
+
+<ul>
+  <li>
+    <p>The data contains continuous and categorical values.</p>
+  </li>
+  <li>
+    <p>Any Date columns needs to be converted to Categoricals. If it is continuous (like how it is in the file i.e. just a date column), then we cannot capture trend and will not be useful for prediction. Below function does that and should be defined in your program and used. It is also present in fastai’s old library. But it converts to String Categoricals.</p>
+  </li>
+  <li>
+    <p>Since the above functions converts the date into String Categoricals, we still need to convert it into Panda categoricals. Panda categoricals are like key value pair (0 value1 , 1 value2 and so on) for each of the values. This is needed for efficiency of the Random Forest. Below function is used for that purpose.</p>
+  </li>
+  <li>
+    <p>Both these functions change the dataframe in-place. The function will need to be changed if it has to write to a different dataframe.</p>
+  </li>
+  <li>
+    <p>Dataframe now has Category Objects in it for all non-numerical columns (each non-numerical column we saw in csv is a category object now). There are functions which can be run on Category objects in Python. Cat is one such function and it further has child functions.</p>
+  </li>
+  <li>
+    <p>We now check for blank or missing values for all category objects. Below can give the percentage of such values in each of them. We will deal with them in a while.</p>
+  </li>
+</ul>
+
+<p>display (df_raw.isnull().sum().sort_index()/len(df_raw))</p>
+
+<ul>
+  <li>
+    <p>We can save the dataframe at such a point in a feather format. Saves to disc in the same format as it was in RAM.</p>
+  </li>
+  <li>
+    <p>We can load it back from disc to a dataframe again later.</p>
+  </li>
+  <li>
+    <p>Then we process the dataframe (proc_df) to fix missing values and more importantly makes a copy of dataframe, drops the dependent value (in this case Auction Price object) in this copy dataframe and converts categorical data into their respective codes It also adds 1 to codes to convert Null categories which will have code as -1 to 0 and this also changes the other codes to 1,2,3 and so on. Below is the function which can help with that. This function further uses other child functions mentioned below.</p>
+  </li>
+</ul>
+
+<!-- end list -->
+
+<ul>
+  <li>The original dataframe is used to get the dependent value into a “y” variable.</li>
+</ul>
+
+<p><strong>The above output is in a format that can be passed into Random Forest Regressor.</strong></p>
+
+<p>In statistics, the coefficient of determination, denoted R2 or r2 and pronounced “R squared”, is the proportion of the variance in the dependent variable that is predictable from the independent variable(s). <a href="https://en.wikipedia.org/wiki/Coefficient_of_determination">https://en.wikipedia.org/wiki/Coefficient_of_determination</a></p>
+
+<p>m = RandomForestRegressor(n_jobs=-1)</p>
+
+<p>m.fit(df, y)</p>
+
+<p>m.score(df,y)</p>
+
+<p>However, this could be an overfit since we have used all the data from train.csv</p>
+
+<p>We need to verify this using a validation set. There are various hyperparameters that need to be set and various methods to be employed to get balances Random forest which has a balance between variance (highly overfit for Training data) and bias (highly biased even with Training data)</p>
+
+<p>Good read - <a href="https://towardsdatascience.com/an-implementation-and-explanation-of-the-random-forest-in-python-77bf308a9b76">https://towardsdatascience.com/an-implementation-and-explanation-of-the-random-forest-in-python-77bf308a9b76</a></p>
+
+<p>Different options for Random Forest Regressor.</p>
+
+<p><a href="https://scikit-learn.org/stable/modules/generated/sklearn.ensemble.RandomForestRegressor.html">https://scikit-learn.org/stable/modules/generated/sklearn.ensemble.RandomForestRegressor.html</a></p>
+
+  </div><a class="u-url" href="/blog/2020/09/20/Machine-Learning-Notes.html" hidden></a>
+</article>
+      </div>
+    </main><footer class="site-footer h-card">
+  <data class="u-url" href="/blog/"></data>
+
+  <div class="wrapper">
+
+    <div class="footer-col-wrapper">
+      <div class="footer-col">
+        <p class="feed-subscribe">
+          <a href="/blog/feed.xml">
+            <svg class="svg-icon orange">
+              <use xlink:href="/blog/assets/minima-social-icons.svg#rss"></use>
+            </svg><span>Subscribe</span>
+          </a>
+        </p>
+      </div>
+      <div class="footer-col">
+        <p>An easy to use blogging platform with support for Jupyter Notebooks.</p>
+      </div>
+    </div>
+
+    <div class="social-links"><ul class="social-media-list"><li><a rel="me" href="https://github.com/mrg-ai" title="mrg-ai"><svg class="svg-icon grey"><use xlink:href="/blog/assets/minima-social-icons.svg#github"></use></svg></a></li><li><a rel="me" href="https://twitter.com/ParamsAndActivs" title="ParamsAndActivs"><svg class="svg-icon grey"><use xlink:href="/blog/assets/minima-social-icons.svg#twitter"></use></svg></a></li></ul>
+</div>
+
+  </div>
+
+</footer>
+</body>
+
+</html>
