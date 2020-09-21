@@ -4,6 +4,6 @@ title: About Me
 permalink: /about/
 ---
 
-https://twitter.com/ParamsAndActivs
+<a href=https://twitter.com/ParamsAndActivs>
 
-http://mrgwrites.blogspot.com/
+<a href=http://mrgwrites.blogspot.com/>
