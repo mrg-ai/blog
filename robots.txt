@@ -1,1 +1,1 @@
-Sitemap: https://manjunathrgithub.github.io/mrgfastpages/sitemap.xml
+Sitemap: https://mrg-ai.github.io/mrgblogs/sitemap.xml
