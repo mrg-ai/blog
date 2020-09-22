@@ -1,6 +1,6 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.1.1">Jekyll</generator><link href="https://mrg-ai.github.io/blog/feed.xml" rel="self" type="application/atom+xml" /><link href="https://mrg-ai.github.io/blog/" rel="alternate" type="text/html" /><updated>2020-09-21T12:25:07-05:00</updated><id>https://mrg-ai.github.io/blog/feed.xml</id><title type="html">MRG Blogs</title><subtitle>An easy to use blogging platform with support for Jupyter Notebooks.</subtitle><entry><title type="html">Deep Learning Notes</title><link href="https://mrg-ai.github.io/blog/2020/09/20/Deep-Learning-Notes.html" rel="alternate" type="text/html" title="Deep Learning Notes" /><published>2020-09-20T00:00:00-05:00</published><updated>2020-09-20T00:00:00-05:00</updated><id>https://mrg-ai.github.io/blog/2020/09/20/Deep-Learning-Notes</id><content type="html" xml:base="https://mrg-ai.github.io/blog/2020/09/20/Deep-Learning-Notes.html">&lt;p&gt;Deep Learning Notes&lt;/p&gt;
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.1.1">Jekyll</generator><link href="https://mrg-ai.github.io/blog/feed.xml" rel="self" type="application/atom+xml" /><link href="https://mrg-ai.github.io/blog/" rel="alternate" type="text/html" /><updated>2020-09-22T01:07:02-05:00</updated><id>https://mrg-ai.github.io/blog/feed.xml</id><title type="html">MRG Blogs</title><subtitle>An easy to use blogging platform with support for Jupyter Notebooks.</subtitle><entry><title type="html">Deep Learning Notes</title><link href="https://mrg-ai.github.io/blog/2020/09/21/Deep-Learning-Notes.html" rel="alternate" type="text/html" title="Deep Learning Notes" /><published>2020-09-21T00:00:00-05:00</published><updated>2020-09-21T00:00:00-05:00</updated><id>https://mrg-ai.github.io/blog/2020/09/21/Deep-Learning-Notes</id><content type="html" xml:base="https://mrg-ai.github.io/blog/2020/09/21/Deep-Learning-Notes.html">&lt;p&gt;Deep Learning Notes&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&quot;https://mrg-ai.github.io/blog/assets/img/2020-09-20-Deep-Learning-Notes/media/image1.jpeg&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;https://mrg-ai.github.io/blog/assets/img/2020-09-21-Deep-Learning-Notes/media/image1.jpeg&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
 
 &lt;p&gt;My Notes&lt;/p&gt;
 
@@ -132,7 +132,7 @@ DataBlock API**&lt;/p&gt;
 
 &lt;p&gt;Below is an example for an Image Dataset.&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&quot;assets/img/2020-09-20-Deep-Learning-Notes/media/image2.png&quot; alt=&quot;https://github.com/hiromis/notes/raw/master/lesson3/19.png&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;assets/img/2020-09-21-Deep-Learning-Notes/media/image2.png&quot; alt=&quot;https://github.com/hiromis/notes/raw/master/lesson3/19.png&quot; /&gt;&lt;/p&gt;
 
 &lt;p&gt;In this example, ImageFileList.fromfolder creates Datasets using the files which are in a folder with name as “train-jpg” and the files with a suffix of .jpg. The information about the labels are obtained from a csv file and hence it uses .label_from_csv to which we pass the csv file name.&lt;/p&gt;
 
@@ -278,7 +278,7 @@ DataBlock API**&lt;/p&gt;
 
 &lt;p&gt;&lt;strong&gt;&lt;em&gt;parameters = parameters minus learning rate * parameters.gradient_descent(loss function)&lt;/em&gt;&lt;/strong&gt;&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&quot;https://mrg-ai.github.io/blog/assets/img/2020-09-20-Deep-Learning-Notes/media/image4.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;https://mrg-ai.github.io/blog/assets/img/2020-09-21-Deep-Learning-Notes/media/image4.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
 
 &lt;p&gt;&lt;strong&gt;&lt;span class=&quot;underline&quot;&gt;Revision of GD (Gradient Descent) (Lesson 2 from the middle of the video)&lt;/span&gt;&lt;/strong&gt;&lt;/p&gt;
 
@@ -286,11 +286,11 @@ DataBlock API**&lt;/p&gt;
 
 &lt;p&gt;If the above equation is executed for different “i” it will become a matrix multiplication.&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&quot;https://mrg-ai.github.io/blog/assets/img/2020-09-20-Deep-Learning-Notes/media/image5.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;https://mrg-ai.github.io/blog/assets/img/2020-09-21-Deep-Learning-Notes/media/image5.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
 
 &lt;p&gt;Using pytorch above equation can be written as below. (X first column is Random numbers)&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&quot;https://mrg-ai.github.io/blog/assets/img/2020-09-20-Deep-Learning-Notes/media/image6.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;https://mrg-ai.github.io/blog/assets/img/2020-09-21-Deep-Learning-Notes/media/image6.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
 
 &lt;p&gt;Tensor is a regular sized (non-ragged) array. It can be rectangular (2D) or a Cube (3D) or more dimensions. But it is always a regular size.&lt;/p&gt;
 
@@ -298,7 +298,7 @@ DataBlock API**&lt;/p&gt;
 
 &lt;p&gt;If we plot the y function from screenshot above&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&quot;https://mrg-ai.github.io/blog/assets/img/2020-09-20-Deep-Learning-Notes/media/image7.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;https://mrg-ai.github.io/blog/assets/img/2020-09-21-Deep-Learning-Notes/media/image7.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
 
 &lt;p&gt;If we want to fit a line through these points without knowing the coefficients 3 and 2 i.e. Tensor A, we start with some random values and we can plot the line.&lt;/p&gt;
 
@@ -308,11 +308,11 @@ DataBlock API**&lt;/p&gt;
 
 &lt;p&gt;Loss is nothing but the distance of the line from the dots. If we reduce the loss, the line will match the dots and go through them thereby keeping the loss at a minimum.&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&quot;https://mrg-ai.github.io/blog/assets/img/2020-09-20-Deep-Learning-Notes/media/image8.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;https://mrg-ai.github.io/blog/assets/img/2020-09-21-Deep-Learning-Notes/media/image8.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
 
 &lt;p&gt;The gradient/derivative is used along with learning rate to change the value of the co-efficients and bring the line closer to where we want.&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&quot;https://mrg-ai.github.io/blog/assets/img/2020-09-20-Deep-Learning-Notes/media/image9.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;https://mrg-ai.github.io/blog/assets/img/2020-09-21-Deep-Learning-Notes/media/image9.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
 
 &lt;p&gt;&lt;strong&gt;Weight Decay&lt;/strong&gt; – All learners have a weight decay parameters in fastai and a value of 0.1 should help in general.&lt;/p&gt;
 
@@ -326,7 +326,7 @@ DataBlock API**&lt;/p&gt;
 
 &lt;p&gt;&lt;strong&gt;&lt;em&gt;parameters = parameters minus learning rate * parameters.gradient_descent(loss function)&lt;/em&gt;&lt;/strong&gt;&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&quot;https://mrg-ai.github.io/blog/assets/img/2020-09-20-Deep-Learning-Notes/media/image10.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;https://mrg-ai.github.io/blog/assets/img/2020-09-21-Deep-Learning-Notes/media/image10.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
 
 &lt;p&gt;&lt;strong&gt;Momentum –&lt;/strong&gt; The update to the parameters/weights is not just based on the derivative, instead 1/10 of it is the derivative and 90% of it is just the same direction that we went last time. This is exponentially weighted moving average of the step.&lt;/p&gt;
 
@@ -348,7 +348,7 @@ DataBlock API**&lt;/p&gt;
 
 &lt;p&gt;Example - First layer output is skipping all layers and directly going as input to last layer.&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&quot;https://mrg-ai.github.io/blog/assets/img/2020-09-20-Deep-Learning-Notes/media/image11.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;https://mrg-ai.github.io/blog/assets/img/2020-09-21-Deep-Learning-Notes/media/image11.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
 
 &lt;p&gt;Nearest Neighbor interpolation&lt;/p&gt;
 
@@ -362,7 +362,7 @@ DataBlock API**&lt;/p&gt;
 
 &lt;p&gt;By doing this, we achieve identifying different parts of an image and later it can all be tied together to identify the whole image.&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&quot;https://mrg-ai.github.io/blog/assets/img/2020-09-20-Deep-Learning-Notes/media/image12.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;https://mrg-ai.github.io/blog/assets/img/2020-09-21-Deep-Learning-Notes/media/image12.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
 
 &lt;p&gt;For example – a 3x3 matrix multiplied to another 3x3 gives a 3x3 in normal matrix multiplication. However, convolution will only give a single value.&lt;/p&gt;
 
@@ -370,7 +370,7 @@ DataBlock API**&lt;/p&gt;
 
 &lt;p&gt;&lt;strong&gt;Note :&lt;/strong&gt; This is 2D example, However images are generally 3D and the same idea extends to that as well. You will have more conv kernels and so on. For images, it could be 3 conv kernels to start with along with some kind of padding to increase the size of the Tensor. However practically, there are more kernels used even during start.&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&quot;https://mrg-ai.github.io/blog/assets/img/2020-09-20-Deep-Learning-Notes/media/image13.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;https://mrg-ai.github.io/blog/assets/img/2020-09-21-Deep-Learning-Notes/media/image13.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
 
 &lt;p&gt;However, we don’t use Matrix multiplication since its slow and the matrix is anyways sparse with many zeroes.&lt;/p&gt;
 
@@ -394,7 +394,7 @@ DataBlock API**&lt;/p&gt;
 
 &lt;p&gt;The 2x2 blue colored pixels are original image. Remaining are all padding.&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&quot;https://mrg-ai.github.io/blog/assets/img/2020-09-20-Deep-Learning-Notes/media/image14.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;https://mrg-ai.github.io/blog/assets/img/2020-09-21-Deep-Learning-Notes/media/image14.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
 
 &lt;p&gt;This is slightly older where all the padded pixels are basically zeros or white pixels.&lt;/p&gt;
 
@@ -406,11 +406,11 @@ DataBlock API**&lt;/p&gt;
 
 &lt;p&gt;A skip connection or identity connection is added in up direction where the inputs of the down sampling path are added as inputs. See UNET diagram above.&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&quot;https://mrg-ai.github.io/blog/assets/img/2020-09-20-Deep-Learning-Notes/media/image15.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;https://mrg-ai.github.io/blog/assets/img/2020-09-21-Deep-Learning-Notes/media/image15.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
 
 &lt;p&gt;&lt;strong&gt;GAN&lt;/strong&gt;&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&quot;https://mrg-ai.github.io/blog/assets/img/2020-09-20-Deep-Learning-Notes/media/image16.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;https://mrg-ai.github.io/blog/assets/img/2020-09-21-Deep-Learning-Notes/media/image16.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
 
 &lt;p&gt;&lt;strong&gt;RNN&lt;/strong&gt;&lt;/p&gt;
 
@@ -556,7 +556,7 @@ DataBlock API**&lt;/p&gt;
   &lt;li&gt;
     &lt;p&gt;Freezing and Unfreezing&lt;/p&gt;
   &lt;/li&gt;
-&lt;/ul&gt;</content><author><name></name></author><summary type="html">Deep Learning Notes</summary></entry><entry><title type="html">Rossmann</title><link href="https://mrg-ai.github.io/blog/2020/09/20/EDA-Example-using-rossman_data.html" rel="alternate" type="text/html" title="Rossmann" /><published>2020-09-20T00:00:00-05:00</published><updated>2020-09-20T00:00:00-05:00</updated><id>https://mrg-ai.github.io/blog/2020/09/20/EDA-Example-using-rossman_data</id><content type="html" xml:base="https://mrg-ai.github.io/blog/2020/09/20/EDA-Example-using-rossman_data.html">&lt;!--
+&lt;/ul&gt;</content><author><name></name></author><summary type="html">Deep Learning Notes</summary></entry><entry><title type="html">Rossmann</title><link href="https://mrg-ai.github.io/blog/2020/09/21/EDA-Example-using-rossman_data.html" rel="alternate" type="text/html" title="Rossmann" /><published>2020-09-21T00:00:00-05:00</published><updated>2020-09-21T00:00:00-05:00</updated><id>https://mrg-ai.github.io/blog/2020/09/21/EDA-Example-using-rossman_data</id><content type="html" xml:base="https://mrg-ai.github.io/blog/2020/09/21/EDA-Example-using-rossman_data.html">&lt;!--
 #################################################
 ### THIS FILE WAS AUTOGENERATED! DO NOT EDIT! ###
 #################################################
@@ -7578,7 +7578,7 @@ This will apply to each row with School Holiday:&lt;/p&gt;
 &lt;/div&gt;
     
 
-&lt;/div&gt;</content><author><name></name></author><summary type="html"></summary></entry><entry><title type="html">Notebook for ML End to End Project for CA housing data</title><link href="https://mrg-ai.github.io/blog/2020/09/20/ML_EndToEnd_usingCAHousingDataset.html" rel="alternate" type="text/html" title="Notebook for ML End to End Project for CA housing data" /><published>2020-09-20T00:00:00-05:00</published><updated>2020-09-20T00:00:00-05:00</updated><id>https://mrg-ai.github.io/blog/2020/09/20/ML_EndToEnd_usingCAHousingDataset</id><content type="html" xml:base="https://mrg-ai.github.io/blog/2020/09/20/ML_EndToEnd_usingCAHousingDataset.html">&lt;!--
+&lt;/div&gt;</content><author><name></name></author><summary type="html"></summary></entry><entry><title type="html">Notebook for ML End to End Project for CA housing data</title><link href="https://mrg-ai.github.io/blog/2020/09/21/ML_EndToEnd_usingCAHousingDataset.html" rel="alternate" type="text/html" title="Notebook for ML End to End Project for CA housing data" /><published>2020-09-21T00:00:00-05:00</published><updated>2020-09-21T00:00:00-05:00</updated><id>https://mrg-ai.github.io/blog/2020/09/21/ML_EndToEnd_usingCAHousingDataset</id><content type="html" xml:base="https://mrg-ai.github.io/blog/2020/09/21/ML_EndToEnd_usingCAHousingDataset.html">&lt;!--
 #################################################
 ### THIS FILE WAS AUTOGENERATED! DO NOT EDIT! ###
 #################################################
@@ -13137,7 +13137,7 @@ use sklearn classes to try out various hyperparameters and see which ones are be
 &lt;/div&gt;
 &lt;/div&gt;
 &lt;/div&gt;
-&lt;/div&gt;</content><author><name></name></author><summary type="html"></summary></entry><entry><title type="html">Machine Learning End To End Flow Summary</title><link href="https://mrg-ai.github.io/blog/2020/09/20/Machine-Learning-End-to-End-Flow-Summary.html" rel="alternate" type="text/html" title="Machine Learning End To End Flow Summary" /><published>2020-09-20T00:00:00-05:00</published><updated>2020-09-20T00:00:00-05:00</updated><id>https://mrg-ai.github.io/blog/2020/09/20/Machine-Learning-End-to-End-Flow-Summary</id><content type="html" xml:base="https://mrg-ai.github.io/blog/2020/09/20/Machine-Learning-End-to-End-Flow-Summary.html">&lt;p&gt;The blog assumes the reader knows some basic Machine Learning terms.&lt;/p&gt;
+&lt;/div&gt;</content><author><name></name></author><summary type="html"></summary></entry><entry><title type="html">Machine Learning End To End Flow Summary</title><link href="https://mrg-ai.github.io/blog/2020/09/21/Machine-Learning-End-to-End-Flow-Summary.html" rel="alternate" type="text/html" title="Machine Learning End To End Flow Summary" /><published>2020-09-21T00:00:00-05:00</published><updated>2020-09-21T00:00:00-05:00</updated><id>https://mrg-ai.github.io/blog/2020/09/21/Machine-Learning-End-to-End-Flow-Summary</id><content type="html" xml:base="https://mrg-ai.github.io/blog/2020/09/21/Machine-Learning-End-to-End-Flow-Summary.html">&lt;p&gt;The blog assumes the reader knows some basic Machine Learning terms.&lt;/p&gt;
 
 &lt;p&gt;This Summary post should be read along with the below blog post&lt;/p&gt;
 
@@ -13407,7 +13407,7 @@ use sklearn classes to try out various hyperparameters and see which ones are be
   &lt;p&gt;X_test_prepared &lt;strong&gt;=&lt;/strong&gt; full_pipeline&lt;strong&gt;.&lt;/strong&gt;transform&lt;strong&gt;(&lt;/strong&gt;X_test&lt;strong&gt;)&lt;/strong&gt;&lt;/p&gt;
 
   &lt;p&gt;final_predictions &lt;strong&gt;=&lt;/strong&gt; final_model&lt;strong&gt;.&lt;/strong&gt;predict&lt;strong&gt;(&lt;/strong&gt;X_test_prepared&lt;strong&gt;)&lt;/strong&gt;&lt;/p&gt;
-&lt;/blockquote&gt;</content><author><name></name></author><summary type="html">The blog assumes the reader knows some basic Machine Learning terms.</summary></entry><entry><title type="html">Machine Learning Notes</title><link href="https://mrg-ai.github.io/blog/2020/09/20/Machine-Learning-Notes.html" rel="alternate" type="text/html" title="Machine Learning Notes" /><published>2020-09-20T00:00:00-05:00</published><updated>2020-09-20T00:00:00-05:00</updated><id>https://mrg-ai.github.io/blog/2020/09/20/Machine-Learning-Notes</id><content type="html" xml:base="https://mrg-ai.github.io/blog/2020/09/20/Machine-Learning-Notes.html">&lt;p&gt;Deep Learning (Neural Networks) are much better to deal with most problems which all these algorithms can do.&lt;/p&gt;
+&lt;/blockquote&gt;</content><author><name></name></author><summary type="html">The blog assumes the reader knows some basic Machine Learning terms.</summary></entry><entry><title type="html">Machine Learning Notes</title><link href="https://mrg-ai.github.io/blog/2020/09/21/Machine-Learning-Notes.html" rel="alternate" type="text/html" title="Machine Learning Notes" /><published>2020-09-21T00:00:00-05:00</published><updated>2020-09-21T00:00:00-05:00</updated><id>https://mrg-ai.github.io/blog/2020/09/21/Machine-Learning-Notes</id><content type="html" xml:base="https://mrg-ai.github.io/blog/2020/09/21/Machine-Learning-Notes.html">&lt;p&gt;Deep Learning (Neural Networks) are much better to deal with most problems which all these algorithms can do.&lt;/p&gt;
 
 &lt;p&gt;Libraries – sklearn (scikit), IPython&lt;/p&gt;
 
@@ -13548,7 +13548,7 @@ use sklearn classes to try out various hyperparameters and see which ones are be
 
 &lt;p&gt;Different options for Random Forest Regressor.&lt;/p&gt;
 
-&lt;p&gt;&lt;a href=&quot;https://scikit-learn.org/stable/modules/generated/sklearn.ensemble.RandomForestRegressor.html&quot;&gt;https://scikit-learn.org/stable/modules/generated/sklearn.ensemble.RandomForestRegressor.html&lt;/a&gt;&lt;/p&gt;</content><author><name></name></author><summary type="html">Deep Learning (Neural Networks) are much better to deal with most problems which all these algorithms can do.</summary></entry><entry><title type="html">Notes_ml</title><link href="https://mrg-ai.github.io/blog/2020/09/20/Notes_ML.html" rel="alternate" type="text/html" title="Notes_ml" /><published>2020-09-20T00:00:00-05:00</published><updated>2020-09-20T00:00:00-05:00</updated><id>https://mrg-ai.github.io/blog/2020/09/20/Notes_ML</id><content type="html" xml:base="https://mrg-ai.github.io/blog/2020/09/20/Notes_ML.html">&lt;h1 id=&quot;types-of-ml&quot;&gt;Types of ML&lt;/h1&gt;
+&lt;p&gt;&lt;a href=&quot;https://scikit-learn.org/stable/modules/generated/sklearn.ensemble.RandomForestRegressor.html&quot;&gt;https://scikit-learn.org/stable/modules/generated/sklearn.ensemble.RandomForestRegressor.html&lt;/a&gt;&lt;/p&gt;</content><author><name></name></author><summary type="html">Deep Learning (Neural Networks) are much better to deal with most problems which all these algorithms can do.</summary></entry><entry><title type="html">Notes_ml</title><link href="https://mrg-ai.github.io/blog/2020/09/21/Notes_ML.html" rel="alternate" type="text/html" title="Notes_ml" /><published>2020-09-21T00:00:00-05:00</published><updated>2020-09-21T00:00:00-05:00</updated><id>https://mrg-ai.github.io/blog/2020/09/21/Notes_ML</id><content type="html" xml:base="https://mrg-ai.github.io/blog/2020/09/21/Notes_ML.html">&lt;h1 id=&quot;types-of-ml&quot;&gt;Types of ML&lt;/h1&gt;
 
 &lt;p&gt;Based on how they are classified, below are some classifications&lt;/p&gt;
 
