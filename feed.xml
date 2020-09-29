@@ -1,4 +1,36 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.1.1">Jekyll</generator><link href="https://mrg-ai.github.io/blog/feed.xml" rel="self" type="application/atom+xml" /><link href="https://mrg-ai.github.io/blog/" rel="alternate" type="text/html" /><updated>2020-09-29T05:43:59-05:00</updated><id>https://mrg-ai.github.io/blog/feed.xml</id><title type="html">ParamsAndActivs</title><subtitle>An ML/DL/AI enthusiast's thoughts and understandings.</subtitle><entry><title type="html">Data Classes Pytorch And Fast_ai</title><link href="https://mrg-ai.github.io/blog/2020/10/10/Data-Classes-Pytorch-and-Fast_AI.html" rel="alternate" type="text/html" title="Data Classes Pytorch And Fast_ai" /><published>2020-10-10T00:00:00-05:00</published><updated>2020-10-10T00:00:00-05:00</updated><id>https://mrg-ai.github.io/blog/2020/10/10/Data-Classes-Pytorch-and-Fast_AI</id><content type="html" xml:base="https://mrg-ai.github.io/blog/2020/10/10/Data-Classes-Pytorch-and-Fast_AI.html">&lt;p&gt;Pytorch Dataset - A collection of tuples of X(independent features) and Y(dependent or target) for each item. Say there are 100 such tuples.&lt;/p&gt;
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.1.1">Jekyll</generator><link href="https://mrg-ai.github.io/blog/feed.xml" rel="self" type="application/atom+xml" /><link href="https://mrg-ai.github.io/blog/" rel="alternate" type="text/html" /><updated>2020-09-29T09:39:39-05:00</updated><id>https://mrg-ai.github.io/blog/feed.xml</id><title type="html">ParamsAndActivs</title><subtitle>An ML/DL/AI enthusiast's thoughts and understandings.</subtitle><entry><title type="html">Notes On Classification Loss Functions</title><link href="https://mrg-ai.github.io/blog/2020/10/15/Notes-on-Classification-Loss-Functions.html" rel="alternate" type="text/html" title="Notes On Classification Loss Functions" /><published>2020-10-15T00:00:00-05:00</published><updated>2020-10-15T00:00:00-05:00</updated><id>https://mrg-ai.github.io/blog/2020/10/15/Notes-on-Classification-Loss-Functions</id><content type="html" xml:base="https://mrg-ai.github.io/blog/2020/10/15/Notes-on-Classification-Loss-Functions.html">&lt;ul&gt;
+  &lt;li&gt;
+    &lt;p&gt;Loss Function for Single Label Multiple Classes Classification (output is always one class)&lt;/p&gt;
+
+    &lt;ul&gt;
+      &lt;li&gt;
+        &lt;p&gt;softmax is the multi-category equivalent of sigmoid&lt;/p&gt;
+      &lt;/li&gt;
+      &lt;li&gt;
+        &lt;p&gt;softmax, and then the log likelihood (nll) of that - is called cross-entropy loss. In PyTorch, this is available as nn.CrossEntropyLoss&lt;/p&gt;
+      &lt;/li&gt;
+      &lt;li&gt;
+        &lt;p&gt;This will work only when the output is always a category(class).&lt;/p&gt;
+
+        &lt;ul&gt;
+          &lt;li&gt;If input image is something that does not belong to the Classifier’s “n” categories, the output will still be one of those categories which is wrong in real-life scenarios.&lt;/li&gt;
+        &lt;/ul&gt;
+      &lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;Loss Function for Multiple Label Multi Class Classification (with no classes for certain inputs). Input Image may not belong to any category that is being predicted.&lt;/p&gt;
+
+    &lt;ul&gt;
+      &lt;li&gt;
+        &lt;p&gt;Binary Cross Entropy is useful for such cases. It is roughly RMSE loss with log applied.&lt;/p&gt;
+      &lt;/li&gt;
+      &lt;li&gt;
+        &lt;p&gt;nn.BCEWithLogitsLoss is the Pytorch class instance&lt;/p&gt;
+      &lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;</content><author><name></name></author><summary type="html">Loss Function for Single Label Multiple Classes Classification (output is always one class) softmax is the multi-category equivalent of sigmoid softmax, and then the log likelihood (nll) of that - is called cross-entropy loss. In PyTorch, this is available as nn.CrossEntropyLoss This will work only when the output is always a category(class). If input image is something that does not belong to the Classifier’s “n” categories, the output will still be one of those categories which is wrong in real-life scenarios.</summary></entry><entry><title type="html">Data Classes Pytorch And Fast_ai</title><link href="https://mrg-ai.github.io/blog/2020/10/10/Data-Classes-Pytorch-and-Fast_AI.html" rel="alternate" type="text/html" title="Data Classes Pytorch And Fast_ai" /><published>2020-10-10T00:00:00-05:00</published><updated>2020-10-10T00:00:00-05:00</updated><id>https://mrg-ai.github.io/blog/2020/10/10/Data-Classes-Pytorch-and-Fast_AI</id><content type="html" xml:base="https://mrg-ai.github.io/blog/2020/10/10/Data-Classes-Pytorch-and-Fast_AI.html">&lt;p&gt;Pytorch Dataset - A collection of tuples of X(independent features) and Y(dependent or target) for each item. Say there are 100 such tuples.&lt;/p&gt;
 
 &lt;p&gt;Pytorch DataLoader – Pass the above dataset and a batch size to Dataloader. Dataloader returns an iterator of multiple batches of tuples of X and Y.&lt;/p&gt;
 
