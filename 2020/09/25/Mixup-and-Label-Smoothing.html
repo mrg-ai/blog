@@ -4,18 +4,19 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="twitter:card" content="summary_large_image" /><!-- Begin Jekyll SEO tag v2.6.1 -->
-<title>ParamsAndActivs | An ML/DL/AI enthusiast’s thoughts and understandings.</title>
+<title>Mixup And Label Smoothing | ParamsAndActivs</title>
 <meta name="generator" content="Jekyll v4.1.1" />
-<meta property="og:title" content="ParamsAndActivs" />
+<meta property="og:title" content="Mixup And Label Smoothing" />
 <meta property="og:locale" content="en_US" />
-<meta name="description" content="An ML/DL/AI enthusiast’s thoughts and understandings." />
-<meta property="og:description" content="An ML/DL/AI enthusiast’s thoughts and understandings." />
-<link rel="canonical" href="https://mrg-ai.github.io/blog/" />
-<meta property="og:url" content="https://mrg-ai.github.io/blog/" />
+<meta name="description" content="Mixup" />
+<meta property="og:description" content="Mixup" />
+<link rel="canonical" href="https://mrg-ai.github.io/blog/2020/09/25/Mixup-and-Label-Smoothing.html" />
+<meta property="og:url" content="https://mrg-ai.github.io/blog/2020/09/25/Mixup-and-Label-Smoothing.html" />
 <meta property="og:site_name" content="ParamsAndActivs" />
-<meta property="og:image" content="https://mrg-ai.github.io/blog/images/logo.png" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2020-09-25T00:00:00-05:00" />
 <script type="application/ld+json">
-{"url":"https://mrg-ai.github.io/blog/","@type":"WebSite","headline":"ParamsAndActivs","image":"https://mrg-ai.github.io/blog/images/logo.png","name":"ParamsAndActivs","description":"An ML/DL/AI enthusiast’s thoughts and understandings.","@context":"https://schema.org"}</script>
+{"url":"https://mrg-ai.github.io/blog/2020/09/25/Mixup-and-Label-Smoothing.html","@type":"BlogPosting","headline":"Mixup And Label Smoothing","dateModified":"2020-09-25T00:00:00-05:00","datePublished":"2020-09-25T00:00:00-05:00","mainEntityOfPage":{"@type":"WebPage","@id":"https://mrg-ai.github.io/blog/2020/09/25/Mixup-and-Label-Smoothing.html"},"description":"Mixup","@context":"https://schema.org"}</script>
 <!-- End Jekyll SEO tag -->
 <link rel="stylesheet" href="/blog/assets/css/style.css"><link type="application/atom+xml" rel="alternate" href="https://mrg-ai.github.io/blog/feed.xml" title="ParamsAndActivs" /><link rel="shortcut icon" type="image/x-icon" href="/blog/images/favicon.ico"><link href="https://unpkg.com/@primer/css/dist/primer.css" rel="stylesheet" />
 <link rel="stylesheet" href="//use.fontawesome.com/releases/v5.0.7/css/all.css">
@@ -67,77 +68,83 @@ window.onload = wrap_img;
 </header>
 <main class="page-content" aria-label="Content">
       <div class="wrapper">
-        <div class="home"><h1 style="color:black;font-size:22px;">This site is for posting my understandings about Machine Learning, Deep Learning, FastAI etc.
-  Below are some such posts. Feel free to connect via twitter</h1>
+        <article class="post h-entry" itemscope itemtype="http://schema.org/BlogPosting">
 
-<h1 id="posts">Posts</h1>
+  <header class="post-header">
+    <h1 class="post-title p-name" itemprop="name headline">Mixup And Label Smoothing</h1><p class="post-meta post-meta-title"><time class="dt-published" datetime="2020-09-25T00:00:00-05:00" itemprop="datePublished">
+        Sep 25, 2020
+      </time>
+       • <span class="read-time" title="Estimated read time">
+    
+    
+      1 min read
+    
+</span></p>
 
+    
 
+    </header>
 
-  
+  <div class="post-content e-content" itemprop="articleBody">
+    <h1 id="mixup">Mixup</h1>
 
-  <!-- Hide posts if front matter flag hide:true -->
-  
-  
+<p>Mixup is a augmentation technique which works as follows</p>
 
-  <!-- Sort posts by rank, then date -->
-  
-  
-  
+<ol>
+  <li>
+    <p>Take an item from X say X1 (example an image)</p>
+  </li>
+  <li>
+    <p>Choose a Random Weight (value say λ)</p>
+  </li>
+  <li>
+    <p>Choose another item from X say X2 (example a different image randomly)</p>
+  </li>
+  <li>
+    <p>Take the weighted average of item from Point 1 and item from Point 3 i.e. λ(X1) + (1-λ)(X2)</p>
+  </li>
+  <li>
+    <p>Similarly take the weighted average of labels of the X1 and X2.</p>
+  </li>
+  <li>
+    <p>This will help in regularization since each input to the Learner is a combination of more than one input.</p>
+  </li>
+  <li>
+    <p>It will take more time to learn, but will generalize well.</p>
+  </li>
+</ol>
 
- 
-  
+<h1 id="label-smoothing">Label Smoothing</h1>
 
-   <!-- Assemble final sorted posts array -->
-  
-  <ul class="post-list"><li><h3>
-    <a class="post-link" href="/blog/2020/10/15/Notes-on-Classification-Loss-Functions.html">
-    Notes On Classification Loss Functions
-    </a>
-</h3><p class="post-meta">Oct 15, 2020</p>
-</li><li><h3>
-    <a class="post-link" href="/blog/2020/10/10/Data-Classes-Pytorch-and-Fast_AI.html">
-    Data Classes Pytorch And Fast_ai
-    </a>
-</h3><p class="post-meta">Oct 10, 2020</p>
-</li><li><h3>
-    <a class="post-link" href="/blog/2020/09/25/Mixup-and-Label-Smoothing.html">
-    Mixup And Label Smoothing
-    </a>
-</h3><p class="post-meta">Sep 25, 2020</p>
-</li><li><h3>
-    <a class="post-link" href="/blog/2020/09/07/Machine-Learning-End-to-End-Flow-Summary.html">
-    Machine Learning End To End Flow Summary
-    </a>
-</h3><p class="post-meta">Sep 7, 2020</p>
-</li><li><h3>
-    <a class="post-link" href="/blog/2020/08/08/ML-End-To-End-Flow-CAHousingDataset.html">
-    ML End to End Project Flow for CA Housing Data
-    </a>
-</h3><p class="post-meta">Aug 8, 2020</p>
-</li><li><h3>
-    <a class="post-link" href="/blog/2020/05/05/Machine-Learning-Intro.html">
-    Machine Learning Intro
-    </a>
-</h3><p class="post-meta">May 5, 2020</p>
-</li><li><h3>
-    <a class="post-link" href="/blog/2020/01/12/FastAI-Deep-Learning-Notes.html">
-    Fastai Deep Learning Notes
-    </a>
-</h3><p class="post-meta">Jan 12, 2020</p>
-</li><li><h3>
-    <a class="post-link" href="/blog/2019/12/31/Linear-Regression-Using-Pytorch.html">
-    Linear Regression using Pytorch from Scratch
-    </a>
-</h3><p class="post-meta">Dec 31, 2019</p>
-</li><li><h3>
-    <a class="post-link" href="/blog/2019/12/12/Exploratory-Data-Analysis-Rossman-Data.html">
-    Exploratory-Data-Analysis-Rossman-Data
-    </a>
-</h3><p class="post-meta">Dec 12, 2019</p>
-</li></ul>
+<ol>
+  <li>
+    <p>This method is to avoid overfitting and is for the Labels</p>
+  </li>
+  <li>
+    <p>Labels are generally one-hot encoded and hence will be a 0s or 1s.</p>
+  </li>
+  <li>
+    <p>This method is change them as follows</p>
 
-    </div>
+    <ol>
+      <li>
+        <p>Take a small value ε and replace 0s with with ε/N where N is the number of classes. If it is a classifier which classifies into 10 categories, N is 10.</p>
+      </li>
+      <li>
+        <p>Replace 1s with 1 – ε+ ε/N</p>
+      </li>
+    </ol>
+  </li>
+  <li>
+    <p>For label smoothing, above points are only to understand how it works</p>
+  </li>
+  <li>
+    <p>In practical scenarios, to implement this, all that is needed is an appropriate Loss function. LabelSmoothingCrossEntropy() in FastAI is such loss function.</p>
+  </li>
+</ol>
+
+  </div><a class="u-url" href="/blog/2020/09/25/Mixup-and-Label-Smoothing.html" hidden></a>
+</article>
       </div>
     </main><footer class="site-footer h-card">
   <data class="u-url" href="/blog/"></data>

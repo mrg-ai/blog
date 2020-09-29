@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.1.1">Jekyll</generator><link href="https://mrg-ai.github.io/blog/feed.xml" rel="self" type="application/atom+xml" /><link href="https://mrg-ai.github.io/blog/" rel="alternate" type="text/html" /><updated>2020-09-29T09:39:39-05:00</updated><id>https://mrg-ai.github.io/blog/feed.xml</id><title type="html">ParamsAndActivs</title><subtitle>An ML/DL/AI enthusiast's thoughts and understandings.</subtitle><entry><title type="html">Notes On Classification Loss Functions</title><link href="https://mrg-ai.github.io/blog/2020/10/15/Notes-on-Classification-Loss-Functions.html" rel="alternate" type="text/html" title="Notes On Classification Loss Functions" /><published>2020-10-15T00:00:00-05:00</published><updated>2020-10-15T00:00:00-05:00</updated><id>https://mrg-ai.github.io/blog/2020/10/15/Notes-on-Classification-Loss-Functions</id><content type="html" xml:base="https://mrg-ai.github.io/blog/2020/10/15/Notes-on-Classification-Loss-Functions.html">&lt;ul&gt;
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.1.1">Jekyll</generator><link href="https://mrg-ai.github.io/blog/feed.xml" rel="self" type="application/atom+xml" /><link href="https://mrg-ai.github.io/blog/" rel="alternate" type="text/html" /><updated>2020-09-29T13:24:37-05:00</updated><id>https://mrg-ai.github.io/blog/feed.xml</id><title type="html">ParamsAndActivs</title><subtitle>An ML/DL/AI enthusiast's thoughts and understandings.</subtitle><entry><title type="html">Notes On Classification Loss Functions</title><link href="https://mrg-ai.github.io/blog/2020/10/15/Notes-on-Classification-Loss-Functions.html" rel="alternate" type="text/html" title="Notes On Classification Loss Functions" /><published>2020-10-15T00:00:00-05:00</published><updated>2020-10-15T00:00:00-05:00</updated><id>https://mrg-ai.github.io/blog/2020/10/15/Notes-on-Classification-Loss-Functions</id><content type="html" xml:base="https://mrg-ai.github.io/blog/2020/10/15/Notes-on-Classification-Loss-Functions.html">&lt;ul&gt;
   &lt;li&gt;
     &lt;p&gt;Loss Function for Single Label Multiple Classes Classification (output is always one class)&lt;/p&gt;
 
@@ -79,7 +79,62 @@
   &lt;p&gt;&lt;strong&gt;dls = dblock.dataloaders(df)&lt;/strong&gt;&lt;/p&gt;
 &lt;/blockquote&gt;
 
-&lt;p&gt;&lt;strong&gt;dls.show_batch(nrows=2, ncols=3)&lt;/strong&gt;&lt;/p&gt;</content><author><name></name></author><summary type="html">Pytorch Dataset - A collection of tuples of X(independent features) and Y(dependent or target) for each item. Say there are 100 such tuples.</summary></entry><entry><title type="html">Machine Learning End To End Flow Summary</title><link href="https://mrg-ai.github.io/blog/2020/09/07/Machine-Learning-End-to-End-Flow-Summary.html" rel="alternate" type="text/html" title="Machine Learning End To End Flow Summary" /><published>2020-09-07T00:00:00-05:00</published><updated>2020-09-07T00:00:00-05:00</updated><id>https://mrg-ai.github.io/blog/2020/09/07/Machine-Learning-End-to-End-Flow-Summary</id><content type="html" xml:base="https://mrg-ai.github.io/blog/2020/09/07/Machine-Learning-End-to-End-Flow-Summary.html">&lt;p&gt;The blog assumes the reader knows some basic Machine Learning terms.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;dls.show_batch(nrows=2, ncols=3)&lt;/strong&gt;&lt;/p&gt;</content><author><name></name></author><summary type="html">Pytorch Dataset - A collection of tuples of X(independent features) and Y(dependent or target) for each item. Say there are 100 such tuples.</summary></entry><entry><title type="html">Mixup And Label Smoothing</title><link href="https://mrg-ai.github.io/blog/2020/09/25/Mixup-and-Label-Smoothing.html" rel="alternate" type="text/html" title="Mixup And Label Smoothing" /><published>2020-09-25T00:00:00-05:00</published><updated>2020-09-25T00:00:00-05:00</updated><id>https://mrg-ai.github.io/blog/2020/09/25/Mixup-and-Label-Smoothing</id><content type="html" xml:base="https://mrg-ai.github.io/blog/2020/09/25/Mixup-and-Label-Smoothing.html">&lt;h1 id=&quot;mixup&quot;&gt;Mixup&lt;/h1&gt;
+
+&lt;p&gt;Mixup is a augmentation technique which works as follows&lt;/p&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;
+    &lt;p&gt;Take an item from X say X1 (example an image)&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;Choose a Random Weight (value say λ)&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;Choose another item from X say X2 (example a different image randomly)&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;Take the weighted average of item from Point 1 and item from Point 3 i.e. λ(X1) + (1-λ)(X2)&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;Similarly take the weighted average of labels of the X1 and X2.&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;This will help in regularization since each input to the Learner is a combination of more than one input.&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;It will take more time to learn, but will generalize well.&lt;/p&gt;
+  &lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;h1 id=&quot;label-smoothing&quot;&gt;Label Smoothing&lt;/h1&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;
+    &lt;p&gt;This method is to avoid overfitting and is for the Labels&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;Labels are generally one-hot encoded and hence will be a 0s or 1s.&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;This method is change them as follows&lt;/p&gt;
+
+    &lt;ol&gt;
+      &lt;li&gt;
+        &lt;p&gt;Take a small value ε and replace 0s with with ε/N where N is the number of classes. If it is a classifier which classifies into 10 categories, N is 10.&lt;/p&gt;
+      &lt;/li&gt;
+      &lt;li&gt;
+        &lt;p&gt;Replace 1s with 1 – ε+ ε/N&lt;/p&gt;
+      &lt;/li&gt;
+    &lt;/ol&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;For label smoothing, above points are only to understand how it works&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;In practical scenarios, to implement this, all that is needed is an appropriate Loss function. LabelSmoothingCrossEntropy() in FastAI is such loss function.&lt;/p&gt;
+  &lt;/li&gt;
+&lt;/ol&gt;</content><author><name></name></author><summary type="html">Mixup</summary></entry><entry><title type="html">Machine Learning End To End Flow Summary</title><link href="https://mrg-ai.github.io/blog/2020/09/07/Machine-Learning-End-to-End-Flow-Summary.html" rel="alternate" type="text/html" title="Machine Learning End To End Flow Summary" /><published>2020-09-07T00:00:00-05:00</published><updated>2020-09-07T00:00:00-05:00</updated><id>https://mrg-ai.github.io/blog/2020/09/07/Machine-Learning-End-to-End-Flow-Summary</id><content type="html" xml:base="https://mrg-ai.github.io/blog/2020/09/07/Machine-Learning-End-to-End-Flow-Summary.html">&lt;p&gt;The blog assumes the reader knows some basic Machine Learning terms.&lt;/p&gt;
 
 &lt;p&gt;This Summary post should be read along with the below blog post&lt;/p&gt;
 
