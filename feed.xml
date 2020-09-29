@@ -1,4 +1,53 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.1.1">Jekyll</generator><link href="https://mrg-ai.github.io/blog/feed.xml" rel="self" type="application/atom+xml" /><link href="https://mrg-ai.github.io/blog/" rel="alternate" type="text/html" /><updated>2020-09-22T06:23:02-05:00</updated><id>https://mrg-ai.github.io/blog/feed.xml</id><title type="html">ParamsAndActivs</title><subtitle>An ML/DL/AI enthusiast's thoughts and understandings.</subtitle><entry><title type="html">Machine Learning End To End Flow Summary</title><link href="https://mrg-ai.github.io/blog/2020/09/07/Machine-Learning-End-to-End-Flow-Summary.html" rel="alternate" type="text/html" title="Machine Learning End To End Flow Summary" /><published>2020-09-07T00:00:00-05:00</published><updated>2020-09-07T00:00:00-05:00</updated><id>https://mrg-ai.github.io/blog/2020/09/07/Machine-Learning-End-to-End-Flow-Summary</id><content type="html" xml:base="https://mrg-ai.github.io/blog/2020/09/07/Machine-Learning-End-to-End-Flow-Summary.html">&lt;p&gt;The blog assumes the reader knows some basic Machine Learning terms.&lt;/p&gt;
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.1.1">Jekyll</generator><link href="https://mrg-ai.github.io/blog/feed.xml" rel="self" type="application/atom+xml" /><link href="https://mrg-ai.github.io/blog/" rel="alternate" type="text/html" /><updated>2020-09-29T05:43:59-05:00</updated><id>https://mrg-ai.github.io/blog/feed.xml</id><title type="html">ParamsAndActivs</title><subtitle>An ML/DL/AI enthusiast's thoughts and understandings.</subtitle><entry><title type="html">Data Classes Pytorch And Fast_ai</title><link href="https://mrg-ai.github.io/blog/2020/10/10/Data-Classes-Pytorch-and-Fast_AI.html" rel="alternate" type="text/html" title="Data Classes Pytorch And Fast_ai" /><published>2020-10-10T00:00:00-05:00</published><updated>2020-10-10T00:00:00-05:00</updated><id>https://mrg-ai.github.io/blog/2020/10/10/Data-Classes-Pytorch-and-Fast_AI</id><content type="html" xml:base="https://mrg-ai.github.io/blog/2020/10/10/Data-Classes-Pytorch-and-Fast_AI.html">&lt;p&gt;Pytorch Dataset - A collection of tuples of X(independent features) and Y(dependent or target) for each item. Say there are 100 such tuples.&lt;/p&gt;
+
+&lt;p&gt;Pytorch DataLoader – Pass the above dataset and a batch size to Dataloader. Dataloader returns an iterator of multiple batches of tuples of X and Y.&lt;/p&gt;
+
+&lt;p&gt;For the above dataset and batch size =16, DataLoader will return 7 batches of 16 tuples each in the first 6 batches and remaining 4 tuples in the 7&lt;sup&gt;th&lt;/sup&gt; batch. (16*6=96 and remaining 4)&lt;/p&gt;
+
+&lt;p&gt;FastAI Datasets – A training set collection and a validation set collection of tuples of X(independent features) and Y(dependent or target) for each item. This is an iterator as well.&lt;/p&gt;
+
+&lt;p&gt;FastAI DataLoaders – This is a FastAI class which can take multiple Pytorch Dataloaders as input. Generally a training pytorch dataloader and validation pytorch dataloader are passed as inputs to this class.&lt;/p&gt;
+
+&lt;h1 id=&quot;fast-ai-datablock--this-api-is-used-to-create-the-fastai-dataloaders-below-is-an-example&quot;&gt;Fast AI DataBlock – This API is used to create the FastAI Dataloaders. Below is an example.&lt;/h1&gt;
+
+&lt;p&gt;“dls” is the dataloaders class that we created using the Datablock API.&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;
+    &lt;p&gt;This is like a template/blueprint which we defined first.&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;The bold text is where we create the FastAI Dataloaders using the blueprint defined and passing a dataframe as input.&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;splitter_function is a function we are passing as input for splitting the dataframe into train and valid.&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;get_x_function and get_y_function are functions we pass as inputs for getting the X and Y from the dataframe.&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;&lt;a href=&quot;https://docs.fast.ai/data.block&quot;&gt;Fast AI Docs&lt;/a&gt; has more details.&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;show_batch() can be used to see if the Datablock that we defined is correct. For example, if we missed the Item Transformation of RandomResizeCrop and the input images are of different sizes, then the show_batch() is going to fail and provide a meaningful message.&lt;/p&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;dblock = DataBlock(blocks=(ImageBlock, MultiCategoryBlock),&lt;/p&gt;
+
+  &lt;p&gt;splitter=splitter_funtion,&lt;/p&gt;
+
+  &lt;p&gt;get_x=get_x_function,&lt;/p&gt;
+
+  &lt;p&gt;get_y=get_y_funtion,&lt;/p&gt;
+
+  &lt;p&gt;item_tfms = RandomResizedCrop(128, min_scale=0.35))&lt;/p&gt;
+
+  &lt;p&gt;&lt;strong&gt;dls = dblock.dataloaders(df)&lt;/strong&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;&lt;strong&gt;dls.show_batch(nrows=2, ncols=3)&lt;/strong&gt;&lt;/p&gt;</content><author><name></name></author><summary type="html">Pytorch Dataset - A collection of tuples of X(independent features) and Y(dependent or target) for each item. Say there are 100 such tuples.</summary></entry><entry><title type="html">Machine Learning End To End Flow Summary</title><link href="https://mrg-ai.github.io/blog/2020/09/07/Machine-Learning-End-to-End-Flow-Summary.html" rel="alternate" type="text/html" title="Machine Learning End To End Flow Summary" /><published>2020-09-07T00:00:00-05:00</published><updated>2020-09-07T00:00:00-05:00</updated><id>https://mrg-ai.github.io/blog/2020/09/07/Machine-Learning-End-to-End-Flow-Summary</id><content type="html" xml:base="https://mrg-ai.github.io/blog/2020/09/07/Machine-Learning-End-to-End-Flow-Summary.html">&lt;p&gt;The blog assumes the reader knows some basic Machine Learning terms.&lt;/p&gt;
 
 &lt;p&gt;This Summary post should be read along with the below blog post&lt;/p&gt;
 
