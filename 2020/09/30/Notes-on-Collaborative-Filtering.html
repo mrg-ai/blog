@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="twitter:card" content="summary_large_image" /><!-- Begin Jekyll SEO tag v2.6.1 -->
+<title>Notes On Collaborative Filtering | ParamsAndActivs</title>
+<meta name="generator" content="Jekyll v4.1.1" />
+<meta property="og:title" content="Notes On Collaborative Filtering" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="This is the “Probabilistic Matrix Factorization” method for Recommendation systems." />
+<meta property="og:description" content="This is the “Probabilistic Matrix Factorization” method for Recommendation systems." />
+<link rel="canonical" href="https://mrg-ai.github.io/blog/2020/09/30/Notes-on-Collaborative-Filtering.html" />
+<meta property="og:url" content="https://mrg-ai.github.io/blog/2020/09/30/Notes-on-Collaborative-Filtering.html" />
+<meta property="og:site_name" content="ParamsAndActivs" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2020-09-30T00:00:00-05:00" />
+<script type="application/ld+json">
+{"url":"https://mrg-ai.github.io/blog/2020/09/30/Notes-on-Collaborative-Filtering.html","@type":"BlogPosting","headline":"Notes On Collaborative Filtering","dateModified":"2020-09-30T00:00:00-05:00","datePublished":"2020-09-30T00:00:00-05:00","mainEntityOfPage":{"@type":"WebPage","@id":"https://mrg-ai.github.io/blog/2020/09/30/Notes-on-Collaborative-Filtering.html"},"description":"This is the “Probabilistic Matrix Factorization” method for Recommendation systems.","@context":"https://schema.org"}</script>
+<!-- End Jekyll SEO tag -->
+<link rel="stylesheet" href="/blog/assets/css/style.css"><link type="application/atom+xml" rel="alternate" href="https://mrg-ai.github.io/blog/feed.xml" title="ParamsAndActivs" /><link rel="shortcut icon" type="image/x-icon" href="/blog/images/favicon.ico"><link href="https://unpkg.com/@primer/css/dist/primer.css" rel="stylesheet" />
+<link rel="stylesheet" href="//use.fontawesome.com/releases/v5.0.7/css/all.css">
+
+<script>
+function wrap_img(fn) {
+    if (document.attachEvent ? document.readyState === "complete" : document.readyState !== "loading") {
+        var elements = document.querySelectorAll(".post img");
+        Array.prototype.forEach.call(elements, function(el, i) {
+            if (el.getAttribute("title") && (el.className != "emoji")) {
+                const caption = document.createElement('figcaption');
+                var node = document.createTextNode(el.getAttribute("title"));
+                caption.appendChild(node);
+                const wrapper = document.createElement('figure');
+                wrapper.className = 'image';
+                el.parentNode.insertBefore(wrapper, el);
+                el.parentNode.removeChild(el);
+                wrapper.appendChild(el);
+                wrapper.appendChild(caption);
+            }
+        });
+    } else { document.addEventListener('DOMContentLoaded', fn); }
+}
+window.onload = wrap_img;
+</script>
+
+<script>
+    document.addEventListener("DOMContentLoaded", function(){
+    // add link icon to anchor tags
+    var elem = document.querySelectorAll(".anchor-link")
+    elem.forEach(e => (e.innerHTML = '<i class="fas fa-link fa-xs"></i>'));
+    });
+</script>
+</head>
+<body><header class="site-header">
+
+  <div class="wrapper"><a class="site-title" rel="author" href="/blog/">ParamsAndActivs</a><nav class="site-nav">
+        <input type="checkbox" id="nav-trigger" class="nav-trigger" />
+        <label for="nav-trigger">
+          <span class="menu-icon">
+            <svg viewBox="0 0 18 15" width="18px" height="15px">
+              <path d="M18,1.484c0,0.82-0.665,1.484-1.484,1.484H1.484C0.665,2.969,0,2.304,0,1.484l0,0C0,0.665,0.665,0,1.484,0 h15.032C17.335,0,18,0.665,18,1.484L18,1.484z M18,7.516C18,8.335,17.335,9,16.516,9H1.484C0.665,9,0,8.335,0,7.516l0,0 c0-0.82,0.665-1.484,1.484-1.484h15.032C17.335,6.031,18,6.696,18,7.516L18,7.516z M18,13.516C18,14.335,17.335,15,16.516,15H1.484 C0.665,15,0,14.335,0,13.516l0,0c0-0.82,0.665-1.483,1.484-1.483h15.032C17.335,12.031,18,12.695,18,13.516L18,13.516z"/>
+            </svg>
+          </span>
+        </label>
+
+        <div class="trigger"><a class="page-link" href="/blog/about/">About Me</a><a class="page-link" href="/blog/search/">Search</a><a class="page-link" href="/blog/categories/">Tags</a></div>
+      </nav></div>
+</header>
+<main class="page-content" aria-label="Content">
+      <div class="wrapper">
+        <article class="post h-entry" itemscope itemtype="http://schema.org/BlogPosting">
+
+  <header class="post-header">
+    <h1 class="post-title p-name" itemprop="name headline">Notes On Collaborative Filtering</h1><p class="post-meta post-meta-title"><time class="dt-published" datetime="2020-09-30T00:00:00-05:00" itemprop="datePublished">
+        Sep 30, 2020
+      </time>
+       • <span class="read-time" title="Estimated read time">
+    
+    
+      2 min read
+    
+</span></p>
+
+    
+
+    </header>
+
+  <div class="post-content e-content" itemprop="articleBody">
+    <ul>
+  <li>
+    <p>This is the “Probabilistic Matrix Factorization” method for Recommendation systems.</p>
+  </li>
+  <li>
+    <p>Item and User are the two main inputs required and the learner should be able to recommend Items to Users and vice-versa.</p>
+
+    <ul>
+      <li>
+        <p>Example – Item can be Product and User can be Customer (say Amazon)</p>
+      </li>
+      <li>
+        <p>Another example – Item can be Movie and User can be a Viewer (say Netflix)</p>
+      </li>
+    </ul>
+  </li>
+  <li>
+    <p>To understand how this works – imagine the data of items and users as a cross-tab report</p>
+  </li>
+  <li>
+    <p>The intersection of each item and user can capture some useful information like product rating/number of times the product was bought or movie ratings/number of times the movie was played.</p>
+  </li>
+</ul>
+
+<blockquote>
+  <p><img src="https://mrg-ai.github.io/blog/assets/img/2020-09-30-Notes-on-Collaborative-Filtering/media/image3.png" alt="" /></p>
+</blockquote>
+
+<ul>
+  <li>
+    <p>We can predict the gaps in the cross-tab above using collaborative filtering.</p>
+
+    <ul>
+      <li>
+        <p>How much does User 212 going to rate Movie 49 ?</p>
+      </li>
+      <li>
+        <p>Based on this, can we recommend this Movie to him on his home screen ?</p>
+      </li>
+    </ul>
+  </li>
+</ul>
+
+<blockquote>
+  <p><img src="https://mrg-ai.github.io/blog/assets/img/2020-09-30-Notes-on-Collaborative-Filtering/media/image4.png" alt="" /></p>
+</blockquote>
+
+<ul>
+  <li>
+    <p>This method works in normal programming but for deep learning this method of doing a dot product of an individual user and a particular movie cannot be done since it required looking up a particular row of data from each latent factor matrix. This would not help with Gradient Descent which is a must for Deep Learning.</p>
+  </li>
+  <li>
+    <p>However, we can implement the same using a one hot encoded matrix. A matrix multiplication of user latent factor matrix and one hot encoded matrix will return only that row where the value is 1. Remember that one hot encoded matrix will have 0s most of the places and 1 in one particular cell. Gradient Descent can happen on this.</p>
+  </li>
+  <li>
+    <p>But, this is computationally a waste since the one hot encoded matrix is mostly 0s and doing this multiplication for large latent features matrices is not practiced. Instead an embedding is used. What is Embedding ?</p>
+  </li>
+  <li>
+    <p>Most deep learning libraries, including PyTorch, include a special layer that does the above step i.e. <strong>it indexes into a vector using an integer, but has its derivative calculated in such a way that it is identical to what it would have been if it had done a matrix multiplication with a one-hot-encoded vector</strong>. This is called an “<em>Embedding</em>”</p>
+  </li>
+  <li>
+    <p>We also need to add bias for users and a bias for movies since some users are movie aficionados and like most movies or vice-versa and some movies are just something which everyone likes or vice-versa. These biases need to be added to the dot product calculated in above steps.</p>
+  </li>
+  <li>
+    <p>The final layer of the model should also pass through a sigmoid of (a,b) to make sure the values are within the range that we need.</p>
+
+    <ul>
+      <li>For example, for a movie rating, if it should be within 1 to 5, we need pass through a sigmoid of (0,5.5). Since sigmoid never reaches 0 or 5.5 we have done this. If we did (1,5) there will not be any ratings with 1 or 5 which we do not want.</li>
+    </ul>
+  </li>
+  <li>
+    <p>Weight Decay is a regularization technique to make the loss function less sharp and less narrow. It penalizes by adding sum(square of the weights) to Loss function.</p>
+  </li>
+</ul>
+
+  </div><a class="u-url" href="/blog/2020/09/30/Notes-on-Collaborative-Filtering.html" hidden></a>
+</article>
+      </div>
+    </main><footer class="site-footer h-card">
+  <data class="u-url" href="/blog/"></data>
+
+  <div class="wrapper">
+
+    <div class="footer-col-wrapper">
+      <div class="footer-col">
+        <p class="feed-subscribe">
+          <a href="/blog/feed.xml">
+            <svg class="svg-icon orange">
+              <use xlink:href="/blog/assets/minima-social-icons.svg#rss"></use>
+            </svg><span>Subscribe</span>
+          </a>
+        </p>
+      </div>
+      <div class="footer-col">
+        <p>An ML/DL/AI enthusiast&#39;s thoughts and understandings.</p>
+      </div>
+    </div>
+
+    <div class="social-links"><ul class="social-media-list"><li><a rel="me" href="https://github.com/mrg-ai" title="mrg-ai"><svg class="svg-icon grey"><use xlink:href="/blog/assets/minima-social-icons.svg#github"></use></svg></a></li><li><a rel="me" href="https://twitter.com/ParamsAndActivs" title="ParamsAndActivs"><svg class="svg-icon grey"><use xlink:href="/blog/assets/minima-social-icons.svg#twitter"></use></svg></a></li></ul>
+</div>
+
+  </div>
+
+</footer>
+</body>
+
+</html>

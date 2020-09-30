@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.1.1">Jekyll</generator><link href="https://mrg-ai.github.io/blog/feed.xml" rel="self" type="application/atom+xml" /><link href="https://mrg-ai.github.io/blog/" rel="alternate" type="text/html" /><updated>2020-09-29T13:24:37-05:00</updated><id>https://mrg-ai.github.io/blog/feed.xml</id><title type="html">ParamsAndActivs</title><subtitle>An ML/DL/AI enthusiast's thoughts and understandings.</subtitle><entry><title type="html">Notes On Classification Loss Functions</title><link href="https://mrg-ai.github.io/blog/2020/10/15/Notes-on-Classification-Loss-Functions.html" rel="alternate" type="text/html" title="Notes On Classification Loss Functions" /><published>2020-10-15T00:00:00-05:00</published><updated>2020-10-15T00:00:00-05:00</updated><id>https://mrg-ai.github.io/blog/2020/10/15/Notes-on-Classification-Loss-Functions</id><content type="html" xml:base="https://mrg-ai.github.io/blog/2020/10/15/Notes-on-Classification-Loss-Functions.html">&lt;ul&gt;
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.1.1">Jekyll</generator><link href="https://mrg-ai.github.io/blog/feed.xml" rel="self" type="application/atom+xml" /><link href="https://mrg-ai.github.io/blog/" rel="alternate" type="text/html" /><updated>2020-09-30T12:37:00-05:00</updated><id>https://mrg-ai.github.io/blog/feed.xml</id><title type="html">ParamsAndActivs</title><subtitle>An ML/DL/AI enthusiast's thoughts and understandings.</subtitle><entry><title type="html">Notes On Classification Loss Functions</title><link href="https://mrg-ai.github.io/blog/2020/10/15/Notes-on-Classification-Loss-Functions.html" rel="alternate" type="text/html" title="Notes On Classification Loss Functions" /><published>2020-10-15T00:00:00-05:00</published><updated>2020-10-15T00:00:00-05:00</updated><id>https://mrg-ai.github.io/blog/2020/10/15/Notes-on-Classification-Loss-Functions</id><content type="html" xml:base="https://mrg-ai.github.io/blog/2020/10/15/Notes-on-Classification-Loss-Functions.html">&lt;ul&gt;
   &lt;li&gt;
     &lt;p&gt;Loss Function for Single Label Multiple Classes Classification (output is always one class)&lt;/p&gt;
 
@@ -79,7 +79,80 @@
   &lt;p&gt;&lt;strong&gt;dls = dblock.dataloaders(df)&lt;/strong&gt;&lt;/p&gt;
 &lt;/blockquote&gt;
 
-&lt;p&gt;&lt;strong&gt;dls.show_batch(nrows=2, ncols=3)&lt;/strong&gt;&lt;/p&gt;</content><author><name></name></author><summary type="html">Pytorch Dataset - A collection of tuples of X(independent features) and Y(dependent or target) for each item. Say there are 100 such tuples.</summary></entry><entry><title type="html">Mixup And Label Smoothing</title><link href="https://mrg-ai.github.io/blog/2020/09/25/Mixup-and-Label-Smoothing.html" rel="alternate" type="text/html" title="Mixup And Label Smoothing" /><published>2020-09-25T00:00:00-05:00</published><updated>2020-09-25T00:00:00-05:00</updated><id>https://mrg-ai.github.io/blog/2020/09/25/Mixup-and-Label-Smoothing</id><content type="html" xml:base="https://mrg-ai.github.io/blog/2020/09/25/Mixup-and-Label-Smoothing.html">&lt;h1 id=&quot;mixup&quot;&gt;Mixup&lt;/h1&gt;
+&lt;p&gt;&lt;strong&gt;dls.show_batch(nrows=2, ncols=3)&lt;/strong&gt;&lt;/p&gt;</content><author><name></name></author><summary type="html">Pytorch Dataset - A collection of tuples of X(independent features) and Y(dependent or target) for each item. Say there are 100 such tuples.</summary></entry><entry><title type="html">Notes On Collaborative Filtering</title><link href="https://mrg-ai.github.io/blog/2020/09/30/Notes-on-Collaborative-Filtering.html" rel="alternate" type="text/html" title="Notes On Collaborative Filtering" /><published>2020-09-30T00:00:00-05:00</published><updated>2020-09-30T00:00:00-05:00</updated><id>https://mrg-ai.github.io/blog/2020/09/30/Notes-on-Collaborative-Filtering</id><content type="html" xml:base="https://mrg-ai.github.io/blog/2020/09/30/Notes-on-Collaborative-Filtering.html">&lt;ul&gt;
+  &lt;li&gt;
+    &lt;p&gt;This is the “Probabilistic Matrix Factorization” method for Recommendation systems.&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;Item and User are the two main inputs required and the learner should be able to recommend Items to Users and vice-versa.&lt;/p&gt;
+
+    &lt;ul&gt;
+      &lt;li&gt;
+        &lt;p&gt;Example – Item can be Product and User can be Customer (say Amazon)&lt;/p&gt;
+      &lt;/li&gt;
+      &lt;li&gt;
+        &lt;p&gt;Another example – Item can be Movie and User can be a Viewer (say Netflix)&lt;/p&gt;
+      &lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;To understand how this works – imagine the data of items and users as a cross-tab report&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;The intersection of each item and user can capture some useful information like product rating/number of times the product was bought or movie ratings/number of times the movie was played.&lt;/p&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;&lt;img src=&quot;https://mrg-ai.github.io/blog/assets/img/2020-09-30-Notes-on-Collaborative-Filtering/media/image3.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;
+    &lt;p&gt;We can predict the gaps in the cross-tab above using collaborative filtering.&lt;/p&gt;
+
+    &lt;ul&gt;
+      &lt;li&gt;
+        &lt;p&gt;How much does User 212 going to rate Movie 49 ?&lt;/p&gt;
+      &lt;/li&gt;
+      &lt;li&gt;
+        &lt;p&gt;Based on this, can we recommend this Movie to him on his home screen ?&lt;/p&gt;
+      &lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;&lt;img src=&quot;https://mrg-ai.github.io/blog/assets/img/2020-09-30-Notes-on-Collaborative-Filtering/media/image4.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;
+    &lt;p&gt;This method works in normal programming but for deep learning this method of doing a dot product of an individual user and a particular movie cannot be done since it required looking up a particular row of data from each latent factor matrix. This would not help with Gradient Descent which is a must for Deep Learning.&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;However, we can implement the same using a one hot encoded matrix. A matrix multiplication of user latent factor matrix and one hot encoded matrix will return only that row where the value is 1. Remember that one hot encoded matrix will have 0s most of the places and 1 in one particular cell. Gradient Descent can happen on this.&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;But, this is computationally a waste since the one hot encoded matrix is mostly 0s and doing this multiplication for large latent features matrices is not practiced. Instead an embedding is used. What is Embedding ?&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;Most deep learning libraries, including PyTorch, include a special layer that does the above step i.e. &lt;strong&gt;it indexes into a vector using an integer, but has its derivative calculated in such a way that it is identical to what it would have been if it had done a matrix multiplication with a one-hot-encoded vector&lt;/strong&gt;. This is called an “&lt;em&gt;Embedding&lt;/em&gt;”&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;We also need to add bias for users and a bias for movies since some users are movie aficionados and like most movies or vice-versa and some movies are just something which everyone likes or vice-versa. These biases need to be added to the dot product calculated in above steps.&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;The final layer of the model should also pass through a sigmoid of (a,b) to make sure the values are within the range that we need.&lt;/p&gt;
+
+    &lt;ul&gt;
+      &lt;li&gt;For example, for a movie rating, if it should be within 1 to 5, we need pass through a sigmoid of (0,5.5). Since sigmoid never reaches 0 or 5.5 we have done this. If we did (1,5) there will not be any ratings with 1 or 5 which we do not want.&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;Weight Decay is a regularization technique to make the loss function less sharp and less narrow. It penalizes by adding sum(square of the weights) to Loss function.&lt;/p&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;</content><author><name></name></author><summary type="html">This is the “Probabilistic Matrix Factorization” method for Recommendation systems.</summary></entry><entry><title type="html">Mixup And Label Smoothing</title><link href="https://mrg-ai.github.io/blog/2020/09/25/Mixup-and-Label-Smoothing.html" rel="alternate" type="text/html" title="Mixup And Label Smoothing" /><published>2020-09-25T00:00:00-05:00</published><updated>2020-09-25T00:00:00-05:00</updated><id>https://mrg-ai.github.io/blog/2020/09/25/Mixup-and-Label-Smoothing</id><content type="html" xml:base="https://mrg-ai.github.io/blog/2020/09/25/Mixup-and-Label-Smoothing.html">&lt;h1 id=&quot;mixup&quot;&gt;Mixup&lt;/h1&gt;
 
 &lt;p&gt;Mixup is a augmentation technique which works as follows&lt;/p&gt;
 
