@@ -90,13 +90,21 @@ window.onload = wrap_img;
 
 <p>However, this can cause problems because the network might want some activations to be really high in order to make accurate predictions. To fix this, there are two learnable parameters (they will be updated in the SGD step), usually called gamma and beta. After normalizing the activations to get some new activation vector y, a batchnorm layer returns gamma*y + beta.</p>
 
+<h1 id="mean-or-variance-different-from-previous-layers">Mean or Variance different from previous layers</h1>
+
 <p>The activations can have a mean or variance which is independent from the mean and standard deviation of the results of the previous layer.</p>
 
 <p>Those statistics are learned separately, making training easier on a model.</p>
 
+<h1 id="behavior-during-training-and-validation">Behavior during Training and Validation</h1>
+
 <p>The behavior is different during training and validation –</p>
 
 <p>During training the mean and standard deviation of the batch is used to normalize the data, whereas during validation it uses a running mean of the statistics calculated during training.</p>
+
+<h1 id="where-is-it-added">Where is it added</h1>
+
+<p>BatchNorm generally is added after each Conv2D and before the ReLU/any non-Linearity.</p>
 
   </div><a class="u-url" href="/blog/2020/10/16/BatchNorm-Excerpt.html" hidden></a>
 </article>
