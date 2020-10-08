@@ -4,18 +4,19 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="twitter:card" content="summary_large_image" /><!-- Begin Jekyll SEO tag v2.6.1 -->
-<title>ParamsAndActivs | An ML/DL/AI enthusiast’s thoughts and understandings.</title>
+<title>Batchnorm Excerpt | ParamsAndActivs</title>
 <meta name="generator" content="Jekyll v4.1.1" />
-<meta property="og:title" content="ParamsAndActivs" />
+<meta property="og:title" content="Batchnorm Excerpt" />
 <meta property="og:locale" content="en_US" />
-<meta name="description" content="An ML/DL/AI enthusiast’s thoughts and understandings." />
-<meta property="og:description" content="An ML/DL/AI enthusiast’s thoughts and understandings." />
-<link rel="canonical" href="https://mrg-ai.github.io/blog/" />
-<meta property="og:url" content="https://mrg-ai.github.io/blog/" />
+<meta name="description" content="Batch normalization is a regularization technique. It works by taking an average of the mean and standard deviations of the activations of a layer and using those to normalize the activations." />
+<meta property="og:description" content="Batch normalization is a regularization technique. It works by taking an average of the mean and standard deviations of the activations of a layer and using those to normalize the activations." />
+<link rel="canonical" href="https://mrg-ai.github.io/blog/2020/10/16/BatchNorm-Excerpt.html" />
+<meta property="og:url" content="https://mrg-ai.github.io/blog/2020/10/16/BatchNorm-Excerpt.html" />
 <meta property="og:site_name" content="ParamsAndActivs" />
-<meta property="og:image" content="https://mrg-ai.github.io/blog/images/logo.png" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2020-10-16T00:00:00-05:00" />
 <script type="application/ld+json">
-{"url":"https://mrg-ai.github.io/blog/","@type":"WebSite","headline":"ParamsAndActivs","image":"https://mrg-ai.github.io/blog/images/logo.png","name":"ParamsAndActivs","description":"An ML/DL/AI enthusiast’s thoughts and understandings.","@context":"https://schema.org"}</script>
+{"url":"https://mrg-ai.github.io/blog/2020/10/16/BatchNorm-Excerpt.html","@type":"BlogPosting","headline":"Batchnorm Excerpt","dateModified":"2020-10-16T00:00:00-05:00","datePublished":"2020-10-16T00:00:00-05:00","mainEntityOfPage":{"@type":"WebPage","@id":"https://mrg-ai.github.io/blog/2020/10/16/BatchNorm-Excerpt.html"},"description":"Batch normalization is a regularization technique. It works by taking an average of the mean and standard deviations of the activations of a layer and using those to normalize the activations.","@context":"https://schema.org"}</script>
 <!-- End Jekyll SEO tag -->
 <link rel="stylesheet" href="/blog/assets/css/style.css"><link type="application/atom+xml" rel="alternate" href="https://mrg-ai.github.io/blog/feed.xml" title="ParamsAndActivs" /><link rel="shortcut icon" type="image/x-icon" href="/blog/images/favicon.ico"><link href="https://unpkg.com/@primer/css/dist/primer.css" rel="stylesheet" />
 <link rel="stylesheet" href="//use.fontawesome.com/releases/v5.0.7/css/all.css">
@@ -67,102 +68,38 @@ window.onload = wrap_img;
 </header>
 <main class="page-content" aria-label="Content">
       <div class="wrapper">
-        <div class="home"><h1 style="color:black;font-size:22px;">This site is for posting my understandings about Machine Learning, Deep Learning, FastAI etc.
-  Below are some such posts. Feel free to connect via twitter</h1>
+        <article class="post h-entry" itemscope itemtype="http://schema.org/BlogPosting">
 
-<h1 id="posts">Posts</h1>
+  <header class="post-header">
+    <h1 class="post-title p-name" itemprop="name headline">Batchnorm Excerpt</h1><p class="post-meta post-meta-title"><time class="dt-published" datetime="2020-10-16T00:00:00-05:00" itemprop="datePublished">
+        Oct 16, 2020
+      </time>
+       • <span class="read-time" title="Estimated read time">
+    
+    
+      1 min read
+    
+</span></p>
 
+    
 
+    </header>
 
-  
+  <div class="post-content e-content" itemprop="articleBody">
+    <p>Batch normalization is a regularization technique. <strong>It works by taking an average of the mean and standard deviations of the activations of a layer</strong> and using those to normalize the activations.</p>
 
-  <!-- Hide posts if front matter flag hide:true -->
-  
-  
+<p>However, this can cause problems because the network might want some activations to be really high in order to make accurate predictions. To fix this, there are two learnable parameters (they will be updated in the SGD step), usually called gamma and beta. After normalizing the activations to get some new activation vector y, a batchnorm layer returns gamma*y + beta.</p>
 
-  <!-- Sort posts by rank, then date -->
-  
-  
-  
+<p>The activations can have a mean or variance which is independent from the mean and standard deviation of the results of the previous layer.</p>
 
- 
-  
+<p>Those statistics are learned separately, making training easier on a model.</p>
 
-   <!-- Assemble final sorted posts array -->
-  
-  <ul class="post-list"><li><h3>
-    <a class="post-link" href="/blog/2020/10/16/BatchNorm-Excerpt.html">
-    Batchnorm Excerpt
-    </a>
-</h3><p class="post-meta">Oct 16, 2020</p>
-</li><li><h3>
-    <a class="post-link" href="/blog/2020/10/15/Notes-on-Classification-Loss-Functions.html">
-    Notes On Classification Loss Functions
-    </a>
-</h3><p class="post-meta">Oct 15, 2020</p>
-</li><li><h3>
-    <a class="post-link" href="/blog/2020/10/10/CNN-tidbits.html">
-    Cnn Tidbits
-    </a>
-</h3><p class="post-meta">Oct 10, 2020</p>
-</li><li><h3>
-    <a class="post-link" href="/blog/2020/10/10/Data-Classes-Pytorch-and-Fast_AI.html">
-    Data Classes Pytorch And Fast_ai
-    </a>
-</h3><p class="post-meta">Oct 10, 2020</p>
-</li><li><h3>
-    <a class="post-link" href="/blog/2020/09/30/Notes-on-Collaborative-Filtering.html">
-    Notes On Collaborative Filtering
-    </a>
-</h3><p class="post-meta">Sep 30, 2020</p>
-</li><li><h3>
-    <a class="post-link" href="/blog/2020/09/25/Mixup-and-Label-Smoothing.html">
-    Mixup And Label Smoothing
-    </a>
-</h3><p class="post-meta">Sep 25, 2020</p>
-</li><li><h3>
-    <a class="post-link" href="/blog/2020/09/20/Notes-on-NLP.html">
-    Notes On Nlp
-    </a>
-</h3><p class="post-meta">Sep 20, 2020</p>
-</li><li><h3>
-    <a class="post-link" href="/blog/2020/09/07/Machine-Learning-End-to-End-Flow-Summary.html">
-    Machine Learning End To End Flow Summary
-    </a>
-</h3><p class="post-meta">Sep 7, 2020</p>
-</li><li><h3>
-    <a class="post-link" href="/blog/2020/08/15/RNNs-and-LSTMs-Part1.html">
-    RNNs and LSTMs - Part1
-    </a>
-</h3><p class="post-meta">Aug 15, 2020</p>
-</li><li><h3>
-    <a class="post-link" href="/blog/2020/08/08/ML-End-To-End-Flow-CAHousingDataset.html">
-    ML End to End Project Flow for CA Housing Data
-    </a>
-</h3><p class="post-meta">Aug 8, 2020</p>
-</li><li><h3>
-    <a class="post-link" href="/blog/2020/05/05/Machine-Learning-Intro.html">
-    Machine Learning Intro
-    </a>
-</h3><p class="post-meta">May 5, 2020</p>
-</li><li><h3>
-    <a class="post-link" href="/blog/2020/01/12/FastAI-Deep-Learning-Notes.html">
-    Fastai Deep Learning Notes
-    </a>
-</h3><p class="post-meta">Jan 12, 2020</p>
-</li><li><h3>
-    <a class="post-link" href="/blog/2019/12/31/Linear-Regression-Using-Pytorch.html">
-    Linear Regression using Pytorch from Scratch
-    </a>
-</h3><p class="post-meta">Dec 31, 2019</p>
-</li><li><h3>
-    <a class="post-link" href="/blog/2019/12/12/Exploratory-Data-Analysis-Rossman-Data.html">
-    Exploratory-Data-Analysis-Rossman-Data
-    </a>
-</h3><p class="post-meta">Dec 12, 2019</p>
-</li></ul>
+<p>The behavior is different during training and validation –</p>
 
-    </div>
+<p>During training the mean and standard deviation of the batch is used to normalize the data, whereas during validation it uses a running mean of the statistics calculated during training.</p>
+
+  </div><a class="u-url" href="/blog/2020/10/16/BatchNorm-Excerpt.html" hidden></a>
+</article>
       </div>
     </main><footer class="site-footer h-card">
   <data class="u-url" href="/blog/"></data>
