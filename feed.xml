@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.1.1">Jekyll</generator><link href="https://mrg-ai.github.io/blog/feed.xml" rel="self" type="application/atom+xml" /><link href="https://mrg-ai.github.io/blog/" rel="alternate" type="text/html" /><updated>2020-10-08T08:48:25-05:00</updated><id>https://mrg-ai.github.io/blog/feed.xml</id><title type="html">ParamsAndActivs</title><subtitle>An ML/DL/AI enthusiast's thoughts and understandings.</subtitle><entry><title type="html">Notes On Classification Loss Functions</title><link href="https://mrg-ai.github.io/blog/2020/10/15/Notes-on-Classification-Loss-Functions.html" rel="alternate" type="text/html" title="Notes On Classification Loss Functions" /><published>2020-10-15T00:00:00-05:00</published><updated>2020-10-15T00:00:00-05:00</updated><id>https://mrg-ai.github.io/blog/2020/10/15/Notes-on-Classification-Loss-Functions</id><content type="html" xml:base="https://mrg-ai.github.io/blog/2020/10/15/Notes-on-Classification-Loss-Functions.html">&lt;ul&gt;
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.1.1">Jekyll</generator><link href="https://mrg-ai.github.io/blog/feed.xml" rel="self" type="application/atom+xml" /><link href="https://mrg-ai.github.io/blog/" rel="alternate" type="text/html" /><updated>2020-10-08T08:58:08-05:00</updated><id>https://mrg-ai.github.io/blog/feed.xml</id><title type="html">ParamsAndActivs</title><subtitle>An ML/DL/AI enthusiast's thoughts and understandings.</subtitle><entry><title type="html">Notes On Classification Loss Functions</title><link href="https://mrg-ai.github.io/blog/2020/10/15/Notes-on-Classification-Loss-Functions.html" rel="alternate" type="text/html" title="Notes On Classification Loss Functions" /><published>2020-10-15T00:00:00-05:00</published><updated>2020-10-15T00:00:00-05:00</updated><id>https://mrg-ai.github.io/blog/2020/10/15/Notes-on-Classification-Loss-Functions</id><content type="html" xml:base="https://mrg-ai.github.io/blog/2020/10/15/Notes-on-Classification-Loss-Functions.html">&lt;ul&gt;
   &lt;li&gt;
     &lt;p&gt;Loss Function for Single Label Multiple Classes Classification (output is always one class)&lt;/p&gt;
 
@@ -36,7 +36,7 @@
 
 &lt;p&gt;The multiplication of the subset of blue matrix and green kernel to produce one cell of the output is convolution.&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&quot;assets/img/2020-10-10-CNN-tidbits/media/image1.png&quot; alt=&quot;A picture containing diagram Description automatically generated&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;https://mrg-ai.github.io/blog/assets/img/2020-10-10-CNN-tidbits/media/image1.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
 
 &lt;h2 id=&quot;padding&quot;&gt;Padding&lt;/h2&gt;
 
@@ -54,7 +54,7 @@
 
 &lt;h2 id=&quot;general-formula-for-determining-the-size-of-the-output-matrix-after-a-convolution&quot;&gt;General formula for determining the size of the output matrix after a convolution&lt;/h2&gt;
 
-&lt;p&gt;&lt;img src=&quot;assets/img/2020-10-10-CNN-tidbits/media/image2.png&quot; alt=&quot;Graphical user interface, application Description automatically generated&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;https://mrg-ai.github.io/blog/assets/img/2020-10-10-CNN-tidbits/media/image2.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
 
 &lt;ul&gt;
   &lt;li&gt;
@@ -124,7 +124,7 @@
 &lt;/ul&gt;
 
 &lt;blockquote&gt;
-  &lt;p&gt;&lt;img src=&quot;assets/img/2020-10-10-CNN-tidbits/media/image3.png&quot; alt=&quot;Table Description automatically generated&quot; /&gt;&lt;/p&gt;
+  &lt;p&gt;&lt;img src=&quot;https://mrg-ai.github.io/blog/assets/img/2020-10-10-CNN-tidbits/media/image3.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
 &lt;/blockquote&gt;
 
 &lt;p&gt;CNNs for Color Images&lt;/p&gt;
