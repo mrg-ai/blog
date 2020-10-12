@@ -92,21 +92,17 @@ window.onload = wrap_img;
   <li>Accuracy is very simple. It is number of correct predictions divided by the length of output (number of classes in a classifier)</li>
 </ul>
 
-<blockquote>
-  <p><em>n_correct / len(y_pred)</em></p>
+<p><em>n_correct / len(y_pred)</em></p>
 
-  <p>Accuracy is a not a very good performance measures especially when there are skewed values in the dataset. The accuracy of a “Dog or Not” Classifier will be high if the number of input images of dogs are significantly higher than other images.</p>
+<p>Accuracy is a not a very good performance measures especially when there are skewed values in the dataset. The accuracy of a “Dog or Not” Classifier will be high if the number of input images of dogs are significantly higher than other images.</p>
 
-  <p>That does not mean the Model is accurate. We need other performance measures to figure that out.</p>
-</blockquote>
+<p>That does not mean the Model is accurate. We need other performance measures to figure that out.</p>
 
 <h1 id="precision">Precision</h1>
 
 <p>Precision is accuracy of positive predictions. The formula would be</p>
 
-<blockquote>
-  <p><em>Precision=TP/(TP+FP)</em></p>
-</blockquote>
+<p><em>Precision=TP/(TP+FP)</em></p>
 
 <p>TP – True Positives</p>
 
@@ -130,15 +126,15 @@ window.onload = wrap_img;
 
 <p>What is the formula for Recall ?</p>
 
-<blockquote>
-  <p><em>Recall=TP/(TP+FN)</em></p>
-</blockquote>
+<p><em>Recall=TP/(TP+FN)</em></p>
 
 <h1 id="f1-score">F1 Score</h1>
 
 <p>As mentioned before, Precision and Recall go hand-in-hand and we have a measure which uses them both. It is called F1 Score and it is a harmonic mean of Precision and Recall</p>
 
-<p><img src="https://mrg-ai.github.io/blog/assets/img/2020-06-01-Accuracy-Precision-Recall-ROCAUC/media/image2.png" alt="" /></p>
+<blockquote>
+  <p><img src="https://mrg-ai.github.io/blog/assets/img/2020-06-01-Accuracy-Precision-Recall-ROCAUC/media/image2.png" alt="" /></p>
+</blockquote>
 
 <p>Generally, we want Precision and Recall to be similar and a high f1_score indicates that.</p>
 
@@ -195,7 +191,7 @@ window.onload = wrap_img;
     <p><strong>1 – specificity</strong>.</p>
 
     <ul>
-      <li><strong>1 – specificity</strong> gives 1 – TN/ (TN +FP) = FP/(TN + FP) which is FPR.</li>
+      <li><strong>1 – specificity</strong> gives <em>1 – TN/ (TN +FP) = FP/(TN + FP)</em> which is FPR.</li>
     </ul>
   </li>
 </ul>
@@ -205,7 +201,7 @@ window.onload = wrap_img;
 <p>Area under that curve is nothing but AOC. A perfect AOC is 1.</p>
 
 <blockquote>
-  <p><img src="assets/img/2020-06-01-Accuracy-Precision-Recall-ROCAUC/media/image4.png" alt="mls2 0306" /></p>
+  <p><img src="https://mrg-ai.github.io/blog/assets/img/2020-06-01-Accuracy-Precision-Recall-ROCAUC/media/image4.png" alt="" /></p>
 </blockquote>
 
   </div><a class="u-url" href="/blog/2020/06/01/Accuracy-Precision-Recall-ROCAUC.html" hidden></a>
