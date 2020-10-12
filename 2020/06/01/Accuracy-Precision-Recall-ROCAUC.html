@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="twitter:card" content="summary_large_image" /><!-- Begin Jekyll SEO tag v2.6.1 -->
+<title>Accuracy Precision Recall Rocauc | ParamsAndActivs</title>
+<meta name="generator" content="Jekyll v4.1.1" />
+<meta property="og:title" content="Accuracy Precision Recall Rocauc" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="Accuracy" />
+<meta property="og:description" content="Accuracy" />
+<link rel="canonical" href="https://mrg-ai.github.io/blog/2020/06/01/Accuracy-Precision-Recall-ROCAUC.html" />
+<meta property="og:url" content="https://mrg-ai.github.io/blog/2020/06/01/Accuracy-Precision-Recall-ROCAUC.html" />
+<meta property="og:site_name" content="ParamsAndActivs" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2020-06-01T00:00:00-05:00" />
+<script type="application/ld+json">
+{"url":"https://mrg-ai.github.io/blog/2020/06/01/Accuracy-Precision-Recall-ROCAUC.html","@type":"BlogPosting","headline":"Accuracy Precision Recall Rocauc","dateModified":"2020-06-01T00:00:00-05:00","datePublished":"2020-06-01T00:00:00-05:00","mainEntityOfPage":{"@type":"WebPage","@id":"https://mrg-ai.github.io/blog/2020/06/01/Accuracy-Precision-Recall-ROCAUC.html"},"description":"Accuracy","@context":"https://schema.org"}</script>
+<!-- End Jekyll SEO tag -->
+<link rel="stylesheet" href="/blog/assets/css/style.css"><link type="application/atom+xml" rel="alternate" href="https://mrg-ai.github.io/blog/feed.xml" title="ParamsAndActivs" /><link rel="shortcut icon" type="image/x-icon" href="/blog/images/favicon.ico"><link href="https://unpkg.com/@primer/css/dist/primer.css" rel="stylesheet" />
+<link rel="stylesheet" href="//use.fontawesome.com/releases/v5.0.7/css/all.css">
+
+<script>
+function wrap_img(fn) {
+    if (document.attachEvent ? document.readyState === "complete" : document.readyState !== "loading") {
+        var elements = document.querySelectorAll(".post img");
+        Array.prototype.forEach.call(elements, function(el, i) {
+            if (el.getAttribute("title") && (el.className != "emoji")) {
+                const caption = document.createElement('figcaption');
+                var node = document.createTextNode(el.getAttribute("title"));
+                caption.appendChild(node);
+                const wrapper = document.createElement('figure');
+                wrapper.className = 'image';
+                el.parentNode.insertBefore(wrapper, el);
+                el.parentNode.removeChild(el);
+                wrapper.appendChild(el);
+                wrapper.appendChild(caption);
+            }
+        });
+    } else { document.addEventListener('DOMContentLoaded', fn); }
+}
+window.onload = wrap_img;
+</script>
+
+<script>
+    document.addEventListener("DOMContentLoaded", function(){
+    // add link icon to anchor tags
+    var elem = document.querySelectorAll(".anchor-link")
+    elem.forEach(e => (e.innerHTML = '<i class="fas fa-link fa-xs"></i>'));
+    });
+</script>
+</head>
+<body><header class="site-header">
+
+  <div class="wrapper"><a class="site-title" rel="author" href="/blog/">ParamsAndActivs</a><nav class="site-nav">
+        <input type="checkbox" id="nav-trigger" class="nav-trigger" />
+        <label for="nav-trigger">
+          <span class="menu-icon">
+            <svg viewBox="0 0 18 15" width="18px" height="15px">
+              <path d="M18,1.484c0,0.82-0.665,1.484-1.484,1.484H1.484C0.665,2.969,0,2.304,0,1.484l0,0C0,0.665,0.665,0,1.484,0 h15.032C17.335,0,18,0.665,18,1.484L18,1.484z M18,7.516C18,8.335,17.335,9,16.516,9H1.484C0.665,9,0,8.335,0,7.516l0,0 c0-0.82,0.665-1.484,1.484-1.484h15.032C17.335,6.031,18,6.696,18,7.516L18,7.516z M18,13.516C18,14.335,17.335,15,16.516,15H1.484 C0.665,15,0,14.335,0,13.516l0,0c0-0.82,0.665-1.483,1.484-1.483h15.032C17.335,12.031,18,12.695,18,13.516L18,13.516z"/>
+            </svg>
+          </span>
+        </label>
+
+        <div class="trigger"><a class="page-link" href="/blog/about/">About Me</a><a class="page-link" href="/blog/search/">Search</a><a class="page-link" href="/blog/categories/">Tags</a></div>
+      </nav></div>
+</header>
+<main class="page-content" aria-label="Content">
+      <div class="wrapper">
+        <article class="post h-entry" itemscope itemtype="http://schema.org/BlogPosting">
+
+  <header class="post-header">
+    <h1 class="post-title p-name" itemprop="name headline">Accuracy Precision Recall Rocauc</h1><p class="post-meta post-meta-title"><time class="dt-published" datetime="2020-06-01T00:00:00-05:00" itemprop="datePublished">
+        Jun 1, 2020
+      </time>
+       • <span class="read-time" title="Estimated read time">
+    
+    
+      2 min read
+    
+</span></p>
+
+    
+
+    </header>
+
+  <div class="post-content e-content" itemprop="articleBody">
+    <h1 id="accuracy">Accuracy</h1>
+
+<ul>
+  <li>Accuracy is very simple. It is number of correct predictions divided by the length of output (number of classes in a classifier)</li>
+</ul>
+
+<blockquote>
+  <p><em>n_correct / len(y_pred)</em></p>
+
+  <p>Accuracy is a not a very good performance measures especially when there are skewed values in the dataset. The accuracy of a “Dog or Not” Classifier will be high if the number of input images of dogs are significantly higher than other images.</p>
+
+  <p>That does not mean the Model is accurate. We need other performance measures to figure that out.</p>
+</blockquote>
+
+<h1 id="precision">Precision</h1>
+
+<p>Precision is accuracy of positive predictions. The formula would be</p>
+
+<blockquote>
+  <p><em>Precision=TP/(TP+FP)</em></p>
+</blockquote>
+
+<p>TP – True Positives</p>
+
+<p>FP – False Positives</p>
+
+<p>Precision is generally used along with another metric called recall or sensitivity or the true positive rate (TPR)</p>
+
+<p>We will define that in next section. Let’s look at a diagram which shows the True Positives, False Positives, True Negatives and False Negatives.</p>
+
+<p>Below is a confusion matrix for a “5” Detector</p>
+
+<blockquote>
+  <p><img src="https://mrg-ai.github.io/blog/assets/img/2020-06-01-Accuracy-Precision-Recall-ROCAUC/media/image1.png" alt="" /></p>
+</blockquote>
+
+<h1 id="recall">Recall</h1>
+
+<p>As seen in the diagram above, Recall is nothing but ratio of positives correctly identified by the classifier.</p>
+
+<p>In the diagram above, we see three out of five 5’s were identified. The recall is 3/5 whereas the Precision is ¾ (see the formula for Precision that we defined earlier)</p>
+
+<p>What is the formula for Recall ?</p>
+
+<blockquote>
+  <p><em>Recall=TP/(TP+FN)</em></p>
+</blockquote>
+
+<h1 id="f1-score">F1 Score</h1>
+
+<p>As mentioned before, Precision and Recall go hand-in-hand and we have a measure which uses them both. It is called F1 Score and it is a harmonic mean of Precision and Recall</p>
+
+<p><img src="https://mrg-ai.github.io/blog/assets/img/2020-06-01-Accuracy-Precision-Recall-ROCAUC/media/image2.png" alt="" /></p>
+
+<p>Generally, we want Precision and Recall to be similar and a high f1_score indicates that.</p>
+
+<h1 id="precision-recall-tradeoff">Precision Recall Tradeoff</h1>
+
+<p>Like mentioned earlier, we want Precision and Recall to be similar. However, in some cases we might want one of them to be higher depending on the task.</p>
+
+<p>Example –</p>
+
+<ul>
+  <li>
+    <p>YouTube Kids recommendation should have high precision i.e. it should not let even few inappropriate videos even if It rejects many normal videos</p>
+  </li>
+  <li>
+    <p>In case of Quality Control of some object, we would want high recall because we are okay with some false positives (some good quality objects getting flagged), but do not want some low quality object to get through the detection. Human intervention can resolve the false positives.</p>
+  </li>
+</ul>
+
+<p>Note - Increasing precision reduces recall and vice-versa. We cannot make both of them high.</p>
+
+<p>Below diagram shows how that happens..</p>
+
+<blockquote>
+  <p><img src="https://mrg-ai.github.io/blog/assets/img/2020-06-01-Accuracy-Precision-Recall-ROCAUC/media/image3.png" alt="" /></p>
+</blockquote>
+
+<h1 id="roc--auc">ROC – AUC</h1>
+
+<p>Receiving Operating Characteristic (ROC), AUC (Area under the Curve)</p>
+
+<ul>
+  <li>
+    <p>An ROC curve plots the true positive rate (nothing but recall and also called sensitivity) against the false positive rate (FPR).</p>
+
+    <ul>
+      <li>TPR (Recall) is <em>TP/(TP+FN)</em></li>
+    </ul>
+  </li>
+  <li>
+    <p>The FPR is the ratio of negative instances that are incorrectly classified as positive.</p>
+
+    <ul>
+      <li>FPR is <em>FP/(TN+FP)</em></li>
+    </ul>
+  </li>
+  <li>
+    <p>It is equal to 1 – True Negative Rate (TNR), which is the ratio of negative instances that are correctly classified as negative. The TNR is also called <strong>specificity</strong>.</p>
+
+    <ul>
+      <li>TNR is <em>TN/(TN + FP)</em></li>
+    </ul>
+  </li>
+  <li>
+    <p><strong>1 – specificity</strong>.</p>
+
+    <ul>
+      <li><strong>1 – specificity</strong> gives 1 – TN/ (TN +FP) = FP/(TN + FP) which is FPR.</li>
+    </ul>
+  </li>
+</ul>
+
+<p>The ROC curve plots <strong><em>sensitivity** vs **(1 – specificity)</em></strong></p>
+
+<p>Area under that curve is nothing but AOC. A perfect AOC is 1.</p>
+
+<blockquote>
+  <p><img src="assets/img/2020-06-01-Accuracy-Precision-Recall-ROCAUC/media/image4.png" alt="mls2 0306" /></p>
+</blockquote>
+
+  </div><a class="u-url" href="/blog/2020/06/01/Accuracy-Precision-Recall-ROCAUC.html" hidden></a>
+</article>
+      </div>
+    </main><footer class="site-footer h-card">
+  <data class="u-url" href="/blog/"></data>
+
+  <div class="wrapper">
+
+    <div class="footer-col-wrapper">
+      <div class="footer-col">
+        <p class="feed-subscribe">
+          <a href="/blog/feed.xml">
+            <svg class="svg-icon orange">
+              <use xlink:href="/blog/assets/minima-social-icons.svg#rss"></use>
+            </svg><span>Subscribe</span>
+          </a>
+        </p>
+      </div>
+      <div class="footer-col">
+        <p>An ML/DL/AI enthusiast&#39;s thoughts and understandings.</p>
+      </div>
+    </div>
+
+    <div class="social-links"><ul class="social-media-list"><li><a rel="me" href="https://github.com/mrg-ai" title="mrg-ai"><svg class="svg-icon grey"><use xlink:href="/blog/assets/minima-social-icons.svg#github"></use></svg></a></li><li><a rel="me" href="https://twitter.com/ParamsAndActivs" title="ParamsAndActivs"><svg class="svg-icon grey"><use xlink:href="/blog/assets/minima-social-icons.svg#twitter"></use></svg></a></li></ul>
+</div>
+
+  </div>
+
+</footer>
+</body>
+
+</html>
