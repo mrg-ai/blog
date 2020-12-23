@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.1.1">Jekyll</generator><link href="https://mrg-ai.github.io/blog/feed.xml" rel="self" type="application/atom+xml" /><link href="https://mrg-ai.github.io/blog/" rel="alternate" type="text/html" /><updated>2020-12-23T09:57:00-06:00</updated><id>https://mrg-ai.github.io/blog/feed.xml</id><title type="html">ParamsAndActivs</title><subtitle>An ML/DL/AI enthusiast's thoughts and understandings.</subtitle><entry><title type="html">Python Gui Using Gooey</title><link href="https://mrg-ai.github.io/blog/2020/12/23/Python-GUI-using-Gooey.html" rel="alternate" type="text/html" title="Python Gui Using Gooey" /><published>2020-12-23T00:00:00-06:00</published><updated>2020-12-23T00:00:00-06:00</updated><id>https://mrg-ai.github.io/blog/2020/12/23/Python-GUI-using-Gooey</id><content type="html" xml:base="https://mrg-ai.github.io/blog/2020/12/23/Python-GUI-using-Gooey.html">&lt;h1 id=&quot;some-background&quot;&gt;Some background&lt;/h1&gt;
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.1.1">Jekyll</generator><link href="https://mrg-ai.github.io/blog/feed.xml" rel="self" type="application/atom+xml" /><link href="https://mrg-ai.github.io/blog/" rel="alternate" type="text/html" /><updated>2020-12-23T10:06:47-06:00</updated><id>https://mrg-ai.github.io/blog/feed.xml</id><title type="html">ParamsAndActivs</title><subtitle>An ML/DL/AI enthusiast's thoughts and understandings.</subtitle><entry><title type="html">Python Gui Using Gooey</title><link href="https://mrg-ai.github.io/blog/2020/12/23/Python-GUI-using-Gooey.html" rel="alternate" type="text/html" title="Python Gui Using Gooey" /><published>2020-12-23T00:00:00-06:00</published><updated>2020-12-23T00:00:00-06:00</updated><id>https://mrg-ai.github.io/blog/2020/12/23/Python-GUI-using-Gooey</id><content type="html" xml:base="https://mrg-ai.github.io/blog/2020/12/23/Python-GUI-using-Gooey.html">&lt;h1 id=&quot;some-background&quot;&gt;Some background&lt;/h1&gt;
 
 &lt;ul&gt;
   &lt;li&gt;
@@ -11,7 +11,7 @@
     &lt;p&gt;It will not work if one program has to handover the reigns to another program and so on.&lt;/p&gt;
   &lt;/li&gt;
   &lt;li&gt;
-    &lt;p&gt;Here is the github page of Gooey - https://github.com/chriskiehl/Gooey&lt;/p&gt;
+    &lt;p&gt;Here is the github page of Gooey - &lt;a href=&quot;https://github.com/chriskiehl/Gooey&quot;&gt;https://github.com/chriskiehl/Gooey&lt;/a&gt;&lt;/p&gt;
   &lt;/li&gt;
   &lt;li&gt;
     &lt;p&gt;It can be installed using pip install gooey&lt;/p&gt;
@@ -92,56 +92,13 @@
   &lt;li&gt;
     &lt;p&gt;The main function has used GooeyParser to add arguments. All arguments are mandatory in this example.&lt;/p&gt;
   &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;Link to the code - &lt;a href=&quot;https://colab.research.google.com/drive/1rMO6Nq8H60rqkwf56MDf4vfnHO_CFYk3?usp=sharing&quot;&gt;https://colab.research.google.com/drive/1rMO6Nq8H60rqkwf56MDf4vfnHO_CFYk3?usp=sharing&lt;/a&gt;&lt;/p&gt;
+  &lt;/li&gt;
 &lt;/ul&gt;
 
 &lt;blockquote&gt;
-  &lt;p&gt;from gooey import Gooey, GooeyParser&lt;/p&gt;
-
-  &lt;p&gt;def print_func(inputvar, inputtext):&lt;/p&gt;
-
-  &lt;p&gt;print(inputvar + ‘ value is : ‘+ inputtext+ ‘\n’)&lt;/p&gt;
-
-  &lt;p&gt;@Gooey(program_name=’Test Utility’,&lt;/p&gt;
-
-  &lt;p&gt;progress_regex=r”^progress: (\d+)%$”, hide_progress_msg=True)&lt;/p&gt;
-
-  &lt;p&gt;def run_engine():&lt;/p&gt;
-
-  &lt;p&gt;module_list=[‘PIM’,’MFG’,’ADHOC’]&lt;/p&gt;
-
-  &lt;p&gt;default_module=module_list[0]&lt;/p&gt;
-
-  &lt;p&gt;my_parser = GooeyParser(description=’Run Diagnostic queries on a Machine’)&lt;/p&gt;
-
-  &lt;p&gt;my_parser.add_argument(‘MACHINENAME’, metavar=’Enter the Machine Name’, action=’store’, type=str)&lt;/p&gt;
-
-  &lt;p&gt;my_parser.add_argument(‘MODULE’, metavar=’Choose the Module’, action=’store’, type=str, choices=module_list, default=default_module )&lt;/p&gt;
-
-  &lt;p&gt;my_parser.add_argument(‘USER’, metavar=’Enter the username ‘, action=’store’, type=str )&lt;/p&gt;
-
-  &lt;p&gt;my_parser.add_argument(‘PWD’, metavar=’Enter the password ‘, action=’store’, widget=’PasswordField’ )&lt;/p&gt;
-
-  &lt;p&gt;args = my_parser.parse_args()&lt;/p&gt;
-
-  &lt;p&gt;print(‘progress: 20%’)&lt;/p&gt;
-
-  &lt;p&gt;print_func(‘Machine Name’,args.MACHINENAME)&lt;/p&gt;
-
-  &lt;p&gt;print(‘progress: 40%’)&lt;/p&gt;
-
-  &lt;p&gt;print_func(‘Module Name’,args.MODULE)&lt;/p&gt;
-
-  &lt;p&gt;print_func(‘User Name’,args.USER)&lt;/p&gt;
-
-  &lt;p&gt;print(‘progress: 80%’)&lt;/p&gt;
-
-  &lt;p&gt;print_func(‘Password’, ‘******** Password will not be shown ‘)&lt;/p&gt;
-
-  &lt;p&gt;print(‘progress: 100%’)&lt;/p&gt;
-
-  &lt;p&gt;if __name__ == ‘__main__’:&lt;/p&gt;
-
-  &lt;p&gt;run_engine()&lt;/p&gt;
+  &lt;p&gt;&lt;img src=&quot;https://mrg-ai.github.io/blog/assets/img/2020-12-23-Python-GUI-using-Gooey/media/image1.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
 &lt;/blockquote&gt;
 
 &lt;h1 id=&quot;output&quot;&gt;Output&lt;/h1&gt;
@@ -150,7 +107,7 @@
   &lt;li&gt;Startup screen -&lt;/li&gt;
 &lt;/ul&gt;
 
-&lt;p&gt;&lt;img src=&quot;https://mrg-ai.github.io/blog/assets/img/2020-12-23-Python-GUI-using-Gooey/media/image1.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;https://mrg-ai.github.io/blog/assets/img/2020-12-23-Python-GUI-using-Gooey/media/image2.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
 
 &lt;ul&gt;
   &lt;li&gt;
@@ -161,7 +118,7 @@
   &lt;/li&gt;
 &lt;/ul&gt;
 
-&lt;p&gt;&lt;img src=&quot;https://mrg-ai.github.io/blog/assets/img/2020-12-23-Python-GUI-using-Gooey/media/image2.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;https://mrg-ai.github.io/blog/assets/img/2020-12-23-Python-GUI-using-Gooey/media/image3.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
 
 &lt;ul&gt;
   &lt;li&gt;
@@ -172,7 +129,7 @@
   &lt;/li&gt;
 &lt;/ul&gt;
 
-&lt;p&gt;&lt;img src=&quot;https://mrg-ai.github.io/blog/assets/img/2020-12-23-Python-GUI-using-Gooey/media/image3.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;</content><author><name></name></author><summary type="html">Some background</summary></entry><entry><title type="html">QnA Model using BERT for PDF Documents</title><link href="https://mrg-ai.github.io/blog/2020/12/22/QnA_Model_using_BERT_for_PDF_Documents.html" rel="alternate" type="text/html" title="QnA Model using BERT for PDF Documents" /><published>2020-12-22T00:00:00-06:00</published><updated>2020-12-22T00:00:00-06:00</updated><id>https://mrg-ai.github.io/blog/2020/12/22/QnA_Model_using_BERT_for_PDF_Documents</id><content type="html" xml:base="https://mrg-ai.github.io/blog/2020/12/22/QnA_Model_using_BERT_for_PDF_Documents.html">&lt;!--
+&lt;p&gt;&lt;img src=&quot;https://mrg-ai.github.io/blog/assets/img/2020-12-23-Python-GUI-using-Gooey/media/image4.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;</content><author><name></name></author><summary type="html">Some background</summary></entry><entry><title type="html">QnA Model using BERT for PDF Documents</title><link href="https://mrg-ai.github.io/blog/2020/12/22/QnA_Model_using_BERT_for_PDF_Documents.html" rel="alternate" type="text/html" title="QnA Model using BERT for PDF Documents" /><published>2020-12-22T00:00:00-06:00</published><updated>2020-12-22T00:00:00-06:00</updated><id>https://mrg-ai.github.io/blog/2020/12/22/QnA_Model_using_BERT_for_PDF_Documents</id><content type="html" xml:base="https://mrg-ai.github.io/blog/2020/12/22/QnA_Model_using_BERT_for_PDF_Documents.html">&lt;!--
 #################################################
 ### THIS FILE WAS AUTOGENERATED! DO NOT EDIT! ###
 #################################################

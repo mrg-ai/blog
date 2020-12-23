@@ -77,7 +77,7 @@ window.onload = wrap_img;
        • <span class="read-time" title="Estimated read time">
     
     
-      2 min read
+      1 min read
     
 </span></p>
 
@@ -99,7 +99,7 @@ window.onload = wrap_img;
     <p>It will not work if one program has to handover the reigns to another program and so on.</p>
   </li>
   <li>
-    <p>Here is the github page of Gooey - https://github.com/chriskiehl/Gooey</p>
+    <p>Here is the github page of Gooey - <a href="https://github.com/chriskiehl/Gooey">https://github.com/chriskiehl/Gooey</a></p>
   </li>
   <li>
     <p>It can be installed using pip install gooey</p>
@@ -180,56 +180,13 @@ window.onload = wrap_img;
   <li>
     <p>The main function has used GooeyParser to add arguments. All arguments are mandatory in this example.</p>
   </li>
+  <li>
+    <p>Link to the code - <a href="https://colab.research.google.com/drive/1rMO6Nq8H60rqkwf56MDf4vfnHO_CFYk3?usp=sharing">https://colab.research.google.com/drive/1rMO6Nq8H60rqkwf56MDf4vfnHO_CFYk3?usp=sharing</a></p>
+  </li>
 </ul>
 
 <blockquote>
-  <p>from gooey import Gooey, GooeyParser</p>
-
-  <p>def print_func(inputvar, inputtext):</p>
-
-  <p>print(inputvar + ‘ value is : ‘+ inputtext+ ‘\n’)</p>
-
-  <p>@Gooey(program_name=’Test Utility’,</p>
-
-  <p>progress_regex=r”^progress: (\d+)%$”, hide_progress_msg=True)</p>
-
-  <p>def run_engine():</p>
-
-  <p>module_list=[‘PIM’,’MFG’,’ADHOC’]</p>
-
-  <p>default_module=module_list[0]</p>
-
-  <p>my_parser = GooeyParser(description=’Run Diagnostic queries on a Machine’)</p>
-
-  <p>my_parser.add_argument(‘MACHINENAME’, metavar=’Enter the Machine Name’, action=’store’, type=str)</p>
-
-  <p>my_parser.add_argument(‘MODULE’, metavar=’Choose the Module’, action=’store’, type=str, choices=module_list, default=default_module )</p>
-
-  <p>my_parser.add_argument(‘USER’, metavar=’Enter the username ‘, action=’store’, type=str )</p>
-
-  <p>my_parser.add_argument(‘PWD’, metavar=’Enter the password ‘, action=’store’, widget=’PasswordField’ )</p>
-
-  <p>args = my_parser.parse_args()</p>
-
-  <p>print(‘progress: 20%’)</p>
-
-  <p>print_func(‘Machine Name’,args.MACHINENAME)</p>
-
-  <p>print(‘progress: 40%’)</p>
-
-  <p>print_func(‘Module Name’,args.MODULE)</p>
-
-  <p>print_func(‘User Name’,args.USER)</p>
-
-  <p>print(‘progress: 80%’)</p>
-
-  <p>print_func(‘Password’, ‘******** Password will not be shown ‘)</p>
-
-  <p>print(‘progress: 100%’)</p>
-
-  <p>if __name__ == ‘__main__’:</p>
-
-  <p>run_engine()</p>
+  <p><img src="https://mrg-ai.github.io/blog/assets/img/2020-12-23-Python-GUI-using-Gooey/media/image1.png" alt="" /></p>
 </blockquote>
 
 <h1 id="output">Output</h1>
@@ -238,7 +195,7 @@ window.onload = wrap_img;
   <li>Startup screen -</li>
 </ul>
 
-<p><img src="https://mrg-ai.github.io/blog/assets/img/2020-12-23-Python-GUI-using-Gooey/media/image1.png" alt="" /></p>
+<p><img src="https://mrg-ai.github.io/blog/assets/img/2020-12-23-Python-GUI-using-Gooey/media/image2.png" alt="" /></p>
 
 <ul>
   <li>
@@ -249,7 +206,7 @@ window.onload = wrap_img;
   </li>
 </ul>
 
-<p><img src="https://mrg-ai.github.io/blog/assets/img/2020-12-23-Python-GUI-using-Gooey/media/image2.png" alt="" /></p>
+<p><img src="https://mrg-ai.github.io/blog/assets/img/2020-12-23-Python-GUI-using-Gooey/media/image3.png" alt="" /></p>
 
 <ul>
   <li>
@@ -260,7 +217,7 @@ window.onload = wrap_img;
   </li>
 </ul>
 
-<p><img src="https://mrg-ai.github.io/blog/assets/img/2020-12-23-Python-GUI-using-Gooey/media/image3.png" alt="" /></p>
+<p><img src="https://mrg-ai.github.io/blog/assets/img/2020-12-23-Python-GUI-using-Gooey/media/image4.png" alt="" /></p>
 
   </div><a class="u-url" href="/blog/2020/12/23/Python-GUI-using-Gooey.html" hidden></a>
 </article>
